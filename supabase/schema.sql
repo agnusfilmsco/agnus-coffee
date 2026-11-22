@@ -1,0 +1,5 @@
+-- Agnus Coffee · banco de dados
+-- Rode, no Supabase (SQL Editor), os arquivos da pasta migrations/ em ordem:
+--   1) migrations/001_base.sql   (estado do app, radar, fotos, equipe)
+--   2) migrations/002_painel.sql (cadastros, acessos, parceiros, cupons, vendas)
+-- Atualizações futuras chegam como 003_..., 004_... e só adicionam, nunca apagam.

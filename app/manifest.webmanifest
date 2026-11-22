@@ -1,0 +1,17 @@
+{
+  "name": "Agnus Coffee",
+  "short_name": "Agnus Coffee",
+  "description": "Receitas, timer, estoque e clube de cafés especiais da Agnus.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#2A1810",
+  "theme_color": "#2A1810",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
