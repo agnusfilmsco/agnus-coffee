@@ -39,6 +39,13 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: CORS });
   if (req.method !== "POST") return json({ error: "use POST" }, 405);
 
+  // Só quem está logado no app: confere o token do usuário no Supabase Auth.
+  const auth = req.headers.get("Authorization") ?? "";
+  const u = await fetch(`${Deno.env.get("SUPABASE_URL")}/auth/v1/user`, {
+    headers: { Authorization: auth, apikey: Deno.env.get("SUPABASE_ANON_KEY") ?? "" },
+  });
+  if (!u.ok) return json({ error: "entre na sua conta para ler rótulos" }, 401);
+
   const key = Deno.env.get("ANTHROPIC_API_KEY");
   if (!key) return json({ error: "ANTHROPIC_API_KEY não configurada" }, 500);
 
