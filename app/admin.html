@@ -6,33 +6,34 @@
 <title>Painel Agnus Coffee</title>
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" href="icons/icon-192.png">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600..900&family=Archivo:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400..700&display=swap" rel="stylesheet">
 <script src="config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <style>
 /* Painel da equipe: marrom, branco e laranja Agnus; tabela-first, leitura rápida. */
-:root{--ink:#2A1810;--bone:#FDFBF8;--paper:#FFFFFF;--line:#EADFD4;--muted:#7A6556;--agnus:#CF5737;--tint:#FBEAE4;--display:'Montserrat',Arial,sans-serif;--sans:'Archivo','Helvetica Neue',Arial,sans-serif;color-scheme:light}
+:root{--ink:#0A0A0A;--bone:#F2F2F0;--paper:#FFFFFF;--line:#E0DEDA;--muted:#6B6B6B;--agnus:#F43A0F;--brown:#633523;--tint:#FDE6DF;--display:'Helvetica Neue',Helvetica,Arial,sans-serif;--sans:'Helvetica Neue',Helvetica,Arial,sans-serif;color-scheme:light}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--sans);font-size:14px}
 button,input,select{font:inherit;color:inherit}
 button{cursor:pointer;background:none;border:0;padding:0}
 button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--agnus);outline-offset:2px}
 header{position:sticky;top:0;z-index:5;background:var(--ink);color:var(--bone);display:flex;align-items:center;gap:14px;padding:14px 20px}
-header .mark{width:30px;height:30px}
-header h1{font-family:var(--display);font-weight:900;font-size:17px;letter-spacing:-.01em;margin:0;text-transform:uppercase}
+header .mark{width:30px;height:30px;display:block}
+.center .mark{width:84px;height:84px;margin:0 auto}
+header h1{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.01em;margin:0;text-transform:uppercase}
 header .sp{flex:1}
-header .who{font-size:12.5px;color:#D8C6B6}
-header .out{border:1px solid #6A4A38;border-radius:999px;padding:6px 12px;font-size:12px}
+header .who{font-size:12.5px;color:#BDBDBD}
+header .out{border:1px solid #4A4A4A;border-radius:999px;padding:6px 12px;font-size:12px}
 nav{display:flex;gap:6px;padding:12px 20px;border-bottom:1px solid var(--line);overflow-x:auto;background:var(--bone);position:sticky;top:58px;z-index:4}
 nav button{padding:8px 14px;border-radius:999px;border:1px solid var(--line);font-weight:600;font-size:13px;white-space:nowrap}
 nav button.on{background:var(--ink);color:var(--bone);border-color:var(--ink)}
 main{max-width:1120px;margin:0 auto;padding:20px}
-h2{font-family:var(--display);font-weight:800;font-size:22px;margin:4px 0 14px;letter-spacing:-.01em}
+h2{font-family:var(--display);font-weight:700;font-size:26px;margin:4px 0 14px;letter-spacing:-.045em;text-transform:uppercase;line-height:.95}
 .label{text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:600;color:var(--muted)}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
 .kpi{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px}
 .kpi b{display:block;font-family:var(--display);font-weight:900;font-size:30px;letter-spacing:-.02em;margin-top:6px;font-variant-numeric:tabular-nums}
-.kpi.hi{background:var(--agnus);color:#fff;border-color:var(--agnus)}.kpi.hi .label{color:#FBE6D8}
+.kpi.hi{background:var(--agnus);color:var(--ink);border-color:var(--agnus)}.kpi.hi .label{color:#1C1C1C}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:14px}
 .tbl{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:13px}
@@ -66,7 +67,7 @@ input.f,select.f{border:1px solid var(--line);border-radius:10px;padding:9px 10p
 <div id="root"></div>
 <div class="toast" id="toast" role="status"></div>
 <script>
-const MARK='<svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#CF5737"/><g fill="#000" transform="translate(2 4)"><circle cx="22" cy="28" r="7"/><circle cx="29" cy="22" r="7.5"/><circle cx="38" cy="21" r="7.5"/><circle cx="46" cy="25" r="7"/><circle cx="48" cy="32" r="6.5"/><circle cx="40" cy="35" r="7"/><circle cx="29" cy="35" r="7"/><ellipse cx="13" cy="28" rx="6.5" ry="5.2"/><rect x="23" y="38" width="3.2" height="12"/><rect x="29" y="39" width="3.2" height="11"/><rect x="40" y="39" width="3.2" height="11"/><rect x="45.5" y="37" width="3.2" height="13"/></g></svg>';
+const MARK='<img class="mark" src="brand/agnus-mark.png" alt="">';
 const $=s=>document.querySelector(s),root=$('#root');
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dt=v=>v?new Date(v).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'}):'—';
