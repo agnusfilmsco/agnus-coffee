@@ -1546,6 +1546,7 @@ function loginSheet(){
   <div class="or"><span>ou</span></div>
   <div class="field"><label for="loginEmail">E-mail</label><input class="txt" id="loginEmail" type="email" inputmode="email" autocomplete="email" placeholder="voce@email.com"></div>
   <button class="cta dark" style="margin-top:14px" data-act="emailLink">Receber link de acesso</button>
+  <p class="disclaim">Ao entrar, você concorda com os <a href="termos.html" target="_blank" rel="noopener">Termos de Uso</a> e a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
   <p class="disclaim" id="loginMsg">Enviamos um link para o seu e-mail. É só tocar nele para entrar, sem senha.</p>`)}
 function accountSheet(){const nm=(USER.user_metadata&&(USER.user_metadata.full_name||USER.user_metadata.name))||'';
   sheet(`<p class="label">Sua conta</p><h3>${nm||'Conta Agnus'}</h3><p class="notes">${USER.email||''}</p>
