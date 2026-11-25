@@ -96,6 +96,15 @@ Os mesmos dados ficam no Supabase em **Table Editor** (tabelas `perfis`, `evento
 
 ---
 
+## Versão 1.3 (25/11/2026)
+- Banco: rodar `supabase/migrations/004_comunidade.sql` (já rodado no projeto). Cria vitrine, amizades, pre_cadastro_clube, recomendacoes e config.
+- Locais de estoque (Casa, Produtora…): cada pacote tem `loc`; o local ativo define de onde sai o café. Estado do usuário migrado para STATE_V 3 sem perda.
+- Nota de 1 a 5 para cada café (`cafeNotas`) e, em cada preparo, nota, % bebido (cafeína proporcional) e anotação.
+- Receitas: Melitta com técnica própria (pré-infusão, dois despejos, escorrimento lento; medida ABIC 80 g/L) + Melitta especial 1:16; Chemex com bloom de 45 s e drenagem até 4:30.
+- Comunidade: código de amigo de 6 caracteres, receitas e cafés favoritos dos amigos, opção de mostrar para toda a comunidade, Clube Agnus bloqueado com pré-cadastro e meta (editável no painel › Clube).
+- Recomendações de compra na tela inicial, editáveis no painel › Recomendações.
+- Leitura de rótulo: foto enviada em 2000 px (estoque inteiro em 2400 px) e prompt que transcreve o rótulo linha a linha.
+
 ## Recursos novos desta versão
 
 - **Equipamento:** cada pessoa cadastra seus moedores (Comandante, Timemore, Baratza Encore ou qualquer outro, com a escala e o número que usa na V60). Em cada receita, o app mostra a faixa sugerida no moedor dela, deixa ajustar o número, salva o que foi usado e sugere esse número da próxima vez. A avaliação da xícara cita o número ("ficou ácido: tente 22, hoje foi 24").
