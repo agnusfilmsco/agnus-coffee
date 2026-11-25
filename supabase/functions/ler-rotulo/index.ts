@@ -14,15 +14,29 @@ const CORS = {
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
-const CAMPOS = `"brand":texto|null,"name":texto|null,"country":texto em português|null,"region":texto|null,"producer":texto|null,"variety":texto|null,"process":texto em português|null,"roast":"clara"|"media"|"escura"|null,"species":"arabica"|"blend"|"conilon"|"descaf"|null,"notes":[até 4 notas sensoriais em português],"weight_g":número|null,"roast_date":"AAAA-MM-DD"|null,"altitude_m":número|null,"seller":texto|null`;
+const CAMPOS = `"brand":texto|null,"name":texto|null,"country":texto em português|null,"region":texto|null,"farm":texto|null,"producer":texto|null,"variety":texto|null,"process":texto em português|null,"roast":"clara"|"media"|"escura"|null,"roast_label":texto exatamente como no rótulo|null,"species":"arabica"|"blend"|"conilon"|"descaf"|null,"notes":[notas sensoriais exatamente como impressas, traduzidas ao português se estiverem em outro idioma],"weight_g":número|null,"roast_date":"AAAA-MM-DD"|null,"best_before":"AAAA-MM-DD"|null,"altitude_m":número|null,"score":número|null,"harvest":texto|null,"seller":texto|null,"raw_text":texto com as principais linhas lidas do rótulo`;
+
+const REGRAS = `Como ler:
+1. Primeiro leia o rótulo inteiro, linha por linha, incluindo letras pequenas, verso, laterais e etiquetas coladas. Coloque em "raw_text" o que conseguiu ler.
+2. Depois preencha cada campo copiando o texto exatamente como está escrito (mesma grafia, acentos e nome de fazenda, produtor e variedade). Não resuma nem troque por sinônimos.
+3. "brand" é a torrefação ou marca (logotipo). "name" é o nome do café ou do lote, não a marca.
+4. Peso: converta para gramas ("1 kg" = 1000, "12 oz" = 340, "500g" = 500). Use o peso líquido.
+5. Datas: "torrado em", "torra", "roasted on", "data de torra" vão para roast_date; "validade", "best before", "consumir até" vão para best_before. Converta para AAAA-MM-DD. Se só houver mês e ano, use o dia 01.
+6. Altitude: número em metros (se for faixa, use a média). "score" é a pontuação SCA (ex.: 86).
+7. Torra: "clara", "media" ou "escura"; média-clara conta como "clara" e média-escura como "escura". Guarde o texto original em roast_label.
+8. "country" é o país de origem do grão, em português. Para cafés do Brasil, "region" é a região produtora (ex.: Mantiqueira de Minas, Cerrado Mineiro).
+9. Use null quando algo não estiver legível ou não existir. Nunca invente marca, data, peso ou nota.`;
 
 const PROMPTS: Record<string, string> = {
-  single: `Você recebe a foto de um pacote de café, que pode ser de qualquer país e em qualquer idioma. Leia o rótulo com atenção e responda SOMENTE um objeto JSON, sem texto fora dele:
-{${CAMPOS},"confidence":"alta"|"media"|"baixa"}
-Regras: use null quando algo não estiver legível; não invente marca, data ou peso. "country" é o país de origem do grão. "seller" só se o rótulo indicar loja ou cafeteria. Torra média-clara conta como "clara"; média-escura como "escura".`,
-  shelf: `Você recebe uma foto com um ou mais pacotes de café (o estoque de uma pessoa), de qualquer país e idioma. Identifique CADA pacote visível e responda SOMENTE um objeto JSON:
+  single: `Você recebe a foto de um pacote de café, que pode ser de qualquer país e em qualquer idioma.
+${REGRAS}
+Responda SOMENTE um objeto JSON, sem texto fora dele:
+{${CAMPOS},"confidence":"alta"|"media"|"baixa"}`,
+  shelf: `Você recebe uma foto com um ou mais pacotes de café (o estoque de uma pessoa), de qualquer país e idioma. Identifique CADA pacote visível.
+${REGRAS}
+Responda SOMENTE um objeto JSON:
 {"packages":[{${CAMPOS},"box":[x,y,largura,altura em % da imagem, de 0 a 100]}]}
-Regras: um item por pacote, sem repetir; use null no que não estiver legível e não invente marca, peso ou data; "box" é o retângulo aproximado do pacote na foto. Torra média-clara conta como "clara"; média-escura como "escura".`,
+Um item por pacote, sem repetir; "box" é o retângulo aproximado do pacote na foto.`,
 };
 
 function json(body: unknown, status = 200) {
@@ -55,14 +69,14 @@ Deno.serve(async (req) => {
   const mode = body.mode === "shelf" ? "shelf" : "single";
   const image = (body.image ?? "").replace(/^data:[^,]+,/, "");
   const mediaType = ["image/jpeg", "image/png", "image/webp"].includes(body.media_type ?? "") ? body.media_type! : "image/jpeg";
-  if (!image || image.length > 6_000_000) return json({ error: "imagem ausente ou grande demais" }, 400);
+  if (!image || image.length > 8_000_000) return json({ error: "imagem ausente ou grande demais" }, 400);
 
   const r = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: mode === "shelf" ? 3000 : 1200,
+      max_tokens: mode === "shelf" ? 6000 : 2000,
       messages: [{
         role: "user",
         content: [

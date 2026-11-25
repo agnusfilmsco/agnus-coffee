@@ -580,6 +580,78 @@ img.seal{width:120px;height:auto;display:block}
 .page-sub{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:15px;margin:-2px 0 14px}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* v1.3 · locais, notas, comunidade, recomendações */
+.here{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px}
+.here .label{margin-right:4px}
+.here button{padding:6px 12px;border:1px solid var(--line);font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;background:var(--paper)}
+.here button.on{background:var(--agnus);border-color:var(--agnus);color:var(--ink)}
+.loc-row .f .ico{vertical-align:-2px;fill:none;stroke:currentColor;stroke-width:2}
+.loc-pill{display:inline-block;margin-top:6px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--agnus-deep);border:1px solid var(--agnus-deep);padding:2px 6px;align-self:flex-start}
+.mini-stars{color:var(--agnus);font-size:12px;letter-spacing:1px;display:block;margin-top:4px}
+.mini-stars.big{font-size:15px;display:inline-block;margin:0;min-width:58px}
+.nota-pick{display:flex;align-items:center;gap:2px;margin-top:8px}
+.nota-pick button{font-size:30px;line-height:1;color:#D6D4D0;padding:0 2px;transition:transform .15s,color .15s}
+.nota-pick button.on{color:var(--agnus)}
+.nota-pick button:active{transform:scale(1.2)}
+.nota-pick span{margin-left:10px;font-size:13px;color:var(--muted)}
+.rec-card{flex:0 0 auto;width:220px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:16px;border:1px solid var(--line);background:var(--paper);text-align:left}
+.rec-card .cname{font-size:18px;line-height:1.05;text-transform:uppercase;letter-spacing:-.03em;font-weight:700}
+.rec-card .notes{flex:1}
+.rec-foot{display:flex;align-items:center;gap:8px;width:100%;margin-top:4px;font-size:13px}
+.rec-foot .go{margin-left:auto;font-weight:700;letter-spacing:.04em;color:var(--agnus);text-transform:uppercase;font-size:11px}
+.ico.lock{fill:none;stroke:currentColor;stroke-width:2;vertical-align:-1px}
+.club-lock{background:var(--agnus-deep);color:#fff;padding:24px 22px;position:relative}
+.club-lock h2{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:-.045em;line-height:.92;font-size:40px;margin:12px 0 4px}
+.club-lock .it{font-family:var(--serif);font-style:italic;color:var(--agnus-light);margin:0 0 12px}
+.club-lock>p{color:#EDE6E2;font-size:14px;line-height:1.5}
+.club-lock .tag.red{background:var(--agnus);color:var(--ink);border-color:var(--agnus)}
+.meta-bar{margin:18px 0 6px}
+.meta-bar .label{color:#fff}
+.meta-bar .meter{background:rgba(255,255,255,.18);border-radius:0}
+.meta-bar .meter i{background:var(--agnus);border-radius:0}
+.locked-list{margin:14px 0 18px;border-top:1px solid rgba(255,255,255,.18)}
+.lk{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.18);opacity:.9}
+.lk .ico.lock{width:16px;height:16px;margin-top:3px;flex:none;stroke:var(--agnus-light)}
+.lk b{display:block;text-transform:uppercase;letter-spacing:.02em;font-size:14px}
+.lk span{display:block;font-size:13px;color:#D9CFCA;margin-top:2px}
+.friend{flex:0 0 auto;width:150px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:14px;border:1px solid var(--line);background:var(--paper);text-align:left}
+.av{width:40px;height:40px;background:var(--agnus);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;margin-bottom:6px;flex:none}
+.av.big{width:56px;height:56px;font-size:24px;margin:0}
+.invite{display:block;width:100%;text-align:left;position:relative;padding-right:40px}
+.code-box{display:flex;align-items:center;gap:12px;background:var(--ink);color:#fff;padding:16px;margin-top:14px}
+.code-box b{font-size:26px;letter-spacing:.18em;flex:1}
+.code-box .label{color:var(--grey)}
+.loc-list{margin-top:14px;border-top:1px solid var(--line)}
+.loc-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.loc-item input{flex:1}
+details.raw{margin-top:10px;font-size:12px;color:var(--muted)}
+details.raw summary{cursor:pointer;text-transform:uppercase;letter-spacing:.06em;font-size:11px}
+details.raw p{margin-top:6px;line-height:1.5}
+.as-btn{width:100%;text-align:left;background:none}
+.seg4{grid-template-columns:repeat(4,1fr)}
+nav.tabs button{letter-spacing:.04em;font-size:9.5px}
+
+/* v1.3 · entrada: surge do preto */
+.landing{background:#0A0A0A;transition:opacity 1.1s ease,visibility 0s linear 1.1s;transform:none!important}
+.landing.gone{opacity:0;visibility:hidden;pointer-events:none;transform:none}
+.landing.gone .l-inner{transform:scale(1.03);opacity:0;filter:blur(6px);transition:transform 1.1s ease,opacity .9s ease,filter 1.1s ease}
+.l-glow{opacity:0;animation:glowin 3s 2.2s ease forwards}
+@keyframes glowin{to{opacity:.55}}
+@keyframes emerge{from{opacity:0;filter:blur(14px);transform:scale(1.04)}to{opacity:1;filter:blur(0);transform:none}}
+@keyframes softin{from{opacity:0;filter:blur(4px)}to{opacity:1;filter:blur(0)}}
+.l-logo .lamb{animation:emerge 2s .5s cubic-bezier(.25,.6,.2,1) both}
+.l-word{overflow:visible}
+.l-word img{animation:emerge 1.8s 1.5s cubic-bezier(.25,.6,.2,1) both}
+.l-sub{animation:softin 1.4s 2.3s ease both}
+.l-line{animation:grow 1.2s 2.7s cubic-bezier(.25,.6,.2,1) both}
+.l-tag{animation:softin 1.4s 3s ease both}
+.l-ital{animation:softin 1.4s 3.4s ease both}
+.l-meta{animation:softin 1.4s 3.7s ease both}
+.l-micro{animation:softin 1.4s 4s ease both}
+.l-cue{animation:softin 1.4s 4.3s ease both}
+#app.entering main#view .st>*{animation:softin .9s ease both}
+@media (prefers-reduced-motion:reduce){.l-logo .lamb,.l-word img,.l-sub,.l-line,.l-tag,.l-ital,.l-meta,.l-micro,.l-cue,.l-glow{animation-duration:.01s!important;animation-delay:0s!important}}
 </style>
 </head>
 <body>
@@ -654,9 +726,10 @@ const PROFILE={chocolate:'Chocolate',caramelo:'Caramelo',frutado:'Frutado',flora
 const RECIPES=[
   {id:'kasuya',m:'v60',name:'Método 4:6',author:'Tetsu Kasuya',tag:'Campeão mundial',desc:'Os primeiros 40% da água decidem doçura ou acidez. Os 60% finais decidem a intensidade.',dose:20,ratio:15,temp:91,grind:6,engine:'kasuya'},
   {id:'hoffmann-v60',m:'v60',name:'Ultimate V60',author:'James Hoffmann',tag:'Clássica',desc:'Bloom generoso e dois despejos contínuos. Xícara limpa e repetível.',dose:15,ratio:16.7,temp:95,grind:5.5,engine:'hoffv60'},
-  {id:'chemex-classica',m:'chemex',name:'Chemex para dois',author:'Casa Agnus',tag:'Para dividir',desc:'Filtro grosso, xícara limpíssima. Rende duas ou três xícaras.',dose:30,ratio:16.5,temp:94,grind:7,engine:'pulse',pulses:4,interval:40},
-  {id:'kalita-pulse',m:'kalita',name:'Pulsos curtos',author:'Casa Agnus',tag:'Equilíbrio',desc:'Fundo plano e despejos pequenos: extração uniforme e doce.',dose:20,ratio:16,temp:93,grind:6,engine:'pulse',pulses:5,interval:30},
-  {id:'melitta-casa',m:'melitta',name:'Coado de casa',author:'Tradição brasileira',tag:'Dia a dia',desc:'O coado de sempre, com medida certa. Mais forte que o coado especial.',dose:30,ratio:13,temp:92,grind:5,engine:'pulse',pulses:3,interval:40},
+  {id:'chemex-classica',m:'chemex',name:'Chemex para dois',author:'Casa Agnus',tag:'Para dividir',desc:'Filtro grosso de três camadas, xícara limpíssima. Bloom longo, dois despejos e drenagem até 4:30.',dose:30,ratio:16,temp:94,grind:7.5,engine:'chemex'},
+  {id:'kalita-pulse',m:'kalita',name:'Pulsos curtos',author:'Casa Agnus',tag:'Equilíbrio',desc:'Fundo plano e despejos pequenos de 50 g: o nível fica sempre igual e a extração sai uniforme e doce.',dose:20,ratio:16,temp:93,grind:6,engine:'pulse',pulses:5,interval:25},
+  {id:'melitta-casa',m:'melitta',name:'Coado de casa',author:'Tradição brasileira · medida ABIC',tag:'Dia a dia',desc:'80 g de pó por litro, como recomenda a ABIC. Pré-infusão, dois despejos grandes e o cone escorrendo devagar pelo furo pequeno da Melitta.',dose:32,ratio:12.5,temp:92,grind:5,engine:'melitta'},
+  {id:'melitta-especial',m:'melitta',name:'Melitta especial',author:'Casa Agnus',tag:'Café especial',desc:'Mesma técnica da Melitta, na proporção do café especial (1:16). Mais aroma e menos amargor.',dose:20,ratio:16,temp:93,grind:5.5,engine:'melitta'},
   {id:'hoffmann-press',m:'prensa',name:'Prensa sem borra',author:'James Hoffmann',tag:'Clássica',desc:'Quebre a crosta, tire a espuma e espere. Corpo sem lama no fundo.',dose:30,ratio:16.7,temp:96,grind:8.5,engine:'press'},
   {id:'hoffmann-aero',m:'aeropress',name:'AeroPress definitiva',author:'James Hoffmann',tag:'Rápida',desc:'Moagem fina, dois minutos de infusão, prensa lenta.',dose:11,ratio:18,temp:98,grind:3.5,engine:'aero'},
   {id:'aero-invertida',m:'aeropress',name:'Invertida',author:'Estilo campeonato',tag:'Encorpada',desc:'De cabeça para baixo: nada pinga antes da hora.',dose:15,ratio:14.5,temp:88,grind:4,engine:'aeroinv'},
@@ -680,21 +753,21 @@ const EVENTS=[
 /* ---------- estado ---------- */
 let CASA=null,lastCasaSnap='',casaT=0,casaCh=null,SB=null,USER=null,RADAR=[],MARCAS={},isTeam=false,UID=null,cloudT=0,cloudReady=false;
 const KEY='agnus-coffee-v1';
-const DEF={onboarded:false,methods:['v60'],scale:'tem',palate:0,grinder:'comandante',grinders:[],grinderId:null,coffeeId:'dropit-allday',diary:[],waitlist:false,events:[],favorites:['kasuya','hoffmann-press'],caffeine:[],name:'',stock:{},casaId:null,sound:'som',myRecipes:[],subscribed:false,myCoffees:[],profile:{weight:'',height:'',preg:false}};
+const DEF={onboarded:false,methods:['v60'],scale:'tem',palate:0,grinder:'comandante',grinders:[],grinderId:null,coffeeId:'dropit-allday',diary:[],waitlist:false,events:[],favorites:['kasuya','hoffmann-press'],caffeine:[],name:'',stock:{},casaId:null,sound:'som',myRecipes:[],subscribed:false,myCoffees:[],profile:{weight:'',height:'',preg:false},locais:[{id:'casa',nome:'Casa'}],locAtivo:'casa',cafeNotas:{},compartilhar:false,preClube:false};
 let S;
-const APP_VERSION='1.2.0',STATE_V=2;
+const APP_VERSION='1.3.0',STATE_V=3;
 /* Migrações: quando um campo mudar de formato numa atualização, adicione um passo aqui.
    Nunca apague campos antigos sem converter: assim ninguém perde dados ao atualizar. */
 const GRINDER_PRESETS=[
   {key:'comandante',name:'Comandante C40',unit:'cliques',anchor:23,step:3,min:0,max:45},
   {key:'timemore',name:'Timemore C2',unit:'cliques',anchor:18,step:2.4,min:0,max:36},
   {key:'encore',name:'Baratza Encore',unit:'número',anchor:16,step:4,min:1,max:40}];
-const MIGRATIONS={1:st=>st,2:st=>{if(!Array.isArray(st.grinders)){const pre=GRINDER_PRESETS.find(g=>g.key===st.grinder);st.grinders=pre?[Object.assign({id:'g-'+pre.key},pre)]:[];st.grinderId=st.grinders[0]?st.grinders[0].id:null}return st}};
+const MIGRATIONS={1:st=>st,2:st=>{if(!Array.isArray(st.grinders)){const pre=GRINDER_PRESETS.find(g=>g.key===st.grinder);st.grinders=pre?[Object.assign({id:'g-'+pre.key},pre)]:[];st.grinderId=st.grinders[0]?st.grinders[0].id:null}return st},3:st=>{if(!Array.isArray(st.locais)||!st.locais.length)st.locais=[{id:'casa',nome:'Casa'}];if(!st.locAtivo||!st.locais.some(l=>l.id===st.locAtivo))st.locAtivo=st.locais[0].id;Object.values(st.stock||{}).forEach(x=>{if(x&&!x.loc){x.loc=st.locais[0].id;x.locNome=st.locais[0].nome}});if(!st.cafeNotas||typeof st.cafeNotas!=='object')st.cafeNotas={};return st}};
 function migrate(st){st=Object.assign({},DEF,st||{});let v=st._v||0;while(v<STATE_V){v++;if(MIGRATIONS[v])st=MIGRATIONS[v](st)||st}st._v=STATE_V;return st}
 try{S=migrate(JSON.parse(localStorage.getItem(KEY)||'{}'))}catch(e){S=migrate({})}
 function save(){S._rev=Date.now();try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}if(CASA&&cloudReady&&casaSnap()!==lastCasaSnap){clearTimeout(casaT);casaT=setTimeout(pushCasa,900)}if(SB&&USER&&cloudReady){clearTimeout(cloudT);cloudT=setTimeout(pushCloud,1200)}}
 function cloudCopy(){const c=JSON.parse(JSON.stringify(S));Object.values(c.stock||{}).forEach(st=>{if(st.photo&&String(st.photo).startsWith('data:'))st.photo=null});return c}
-async function pushCloud(){if(!SB||!USER)return;try{const {data:cur}=await SB.from('user_state').select('state').eq('user_id',USER.id).maybeSingle();if(cur&&cur.state&&(cur.state._rev||0)>(S._rev||0)){applyCloud(cur.state);return}const {error}=await SB.from('user_state').upsert({user_id:USER.id,state:cloudCopy(),updated_at:new Date().toISOString()});if(error)throw error;setSync('ok')}catch(e){setSync('erro')}}
+async function pushCloud(){if(!SB||!USER)return;try{const {data:cur}=await SB.from('user_state').select('state').eq('user_id',USER.id).maybeSingle();if(cur&&cur.state&&(cur.state._rev||0)>(S._rev||0)){applyCloud(cur.state);return}const {error}=await SB.from('user_state').upsert({user_id:USER.id,state:cloudCopy(),updated_at:new Date().toISOString()});if(error)throw error;setSync('ok');pushVitrine().catch(()=>{})}catch(e){setSync('erro')}}
 function applyCloud(st){const keep=S.stock;S=migrate(st);Object.entries(keep||{}).forEach(([k,v])=>{if(S.stock[k]&&v.photo&&String(v.photo).startsWith('data:')&&!S.stock[k].photo)S.stock[k].photo=v.photo});try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}if(!document.querySelector('.layer.open'))render();setSync('ok')}
 async function pullCloud(){if(!SB||!USER||!cloudReady)return;try{const {data}=await SB.from('user_state').select('state').eq('user_id',USER.id).maybeSingle();if(data&&data.state&&(data.state._rev||0)>(S._rev||0))applyCloud(data.state)}catch(e){}}
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')pullCloud()});
@@ -761,7 +834,17 @@ const ENG={
     {at:75,title:`Despeje até ${w} g`,target:w,note:'Mais suave, termine em 1:45'},
     {at:105,title:'Mexa e gire',target:null,note:'Uma volta com a colher, depois um giro leve'},
     {at:120,title:'Deixe drenar',target:null,note:'Meta: terminar perto de 3:30'}],end:210}},
-  pulse(d,w,s,b,r){const bl=Math.round(d*2.5),n=r.pulses,iv=r.interval,st=[{at:0,title:`Bloom: despeje ${bl} g`,target:bl,note:'Espere o pó respirar'}];
+  melitta(d,w,s,b){const bl=Math.round(d*2),p2=Math.round(w*.55),bt=40,t2=bt+75+b*10;return{steps:[
+    {at:0,title:`Pré-infusão: ${bl} g`,target:bl,note:'Molhe todo o pó com fio fino, do centro para fora. Não mexa'},
+    {at:bt,title:`Despeje até ${p2} g`,target:p2,note:'Círculos lentos no centro, sem jogar água na parede do filtro'},
+    {at:t2,title:`Complete até ${w} g`,target:w,note:'Quando o nível baixar pela metade. Pare a 1 cm da borda'},
+    {at:t2+60,title:'Deixe escorrer',target:null,note:'A Melitta tem furo pequeno e escorre devagar. Não aperte nem mexa o filtro'}],end:t2+60+75}},
+  chemex(d,w){const bl=Math.round(d*2),m=Math.round(w*.6);return{steps:[
+    {at:0,title:`Bloom: despeje ${bl} g`,target:bl,note:'Lado de três camadas do filtro no bico. Molhe todo o pó e espere'},
+    {at:45,title:`Despeje até ${m} g`,target:m,note:'Círculos lentos, nível a 2 cm da borda'},
+    {at:105,title:`Complete até ${w} g`,target:w,note:'Fluxo suave, termine perto de 2:30'},
+    {at:150,title:'Deixe drenar',target:null,note:'Meta: entre 4:00 e 4:30. Passou disso, moa mais grosso'}],end:265}},
+  pulse(d,w,s,b,r){const bl=Math.round(d*2),n=r.pulses,iv=r.interval,st=[{at:0,title:`Bloom: despeje ${bl} g`,target:bl,note:'Espere o pó respirar'}];
     for(let i=0;i<n;i++){const c=i===n-1?w:Math.round(bl+(w-bl)/n*(i+1));st.push({at:45+iv*i,title:`Despeje até ${c} g`,target:c,note:`Despejo ${i+1} de ${n}, em círculos`})}
     const dr=45+iv*n;st.push({at:dr,title:'Deixe drenar',target:null,note:'Sirva assim que parar de pingar'});return{steps:st,end:dr+50}},
   press(d,w,s,b){const sp=240+b*30;return{steps:[
@@ -819,10 +902,10 @@ const TABS=[
   {id:'receitas',n:'Receitas',i:ICONS.v60},
   {id:'cafes',n:'Estoque',i:'<path d="M9 7h14l2 4v15a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V11z"/><path d="M7 11h18"/><circle cx="16" cy="19" r="3.5"/>'},
   {id:'diario',n:'Diário',i:'<path d="M8 4h14a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H8z"/><path d="M8 4v24"/><path d="M12 10h8M12 15h8M12 20h5"/>'},
-  {id:'clube',n:'Clube',i:'<circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="5"/>'}
+  {id:'clube',n:'Comunidade',i:'<circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="5"/>'}
 ];
 let tab='inicio',recSeg='explorar',estSeg='meu',estFilter='todos',diaMode='dia',diaDay=0,recFilter='todos',cafeRoast='todas',cafeProf='todos',cafeQ='';
-function route(){const h=location.hash.replace('#','');tab=TABS.some(t=>t.id===h)?h:'inicio';render()}
+function route(){const h=location.hash.replace('#','');tab=TABS.some(t=>t.id===h)?h:'inicio';render();if(tab==='clube')loadComunidade()}
 function go(t){if(location.hash==='#'+t)render();else location.hash=t}
 function renderTabs(){$('#tabs').innerHTML=TABS.map(t=>`<button class="${t.id===tab?'on':''}" data-act="tab" data-id="${t.id}" aria-current="${t.id===tab?'page':'false'}"><svg class="ico" viewBox="0 0 32 32" aria-hidden="true">${t.i}</svg>${t.n}</button>`).join('')}
 
@@ -854,8 +937,17 @@ function stars(n){n=Math.round(n);return `<span class="stars" aria-label="${n} d
 function dayKey(t){return new Date(t).toDateString()}
 const MESES=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
 let PH=null;
-function readPhoto(file,cb,max){const fr=new FileReader();fr.onload=()=>{const img=new Image();img.onload=()=>{const k=Math.min(1,(max||520)/Math.max(img.width,img.height)),c=document.createElement('canvas');c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);c.getContext('2d').drawImage(img,0,0,c.width,c.height);cb(c.toDataURL('image/jpeg',.72))};img.src=fr.result};fr.readAsDataURL(file)}
+function readPhoto(file,cb,max,big){const fr=new FileReader();fr.onload=()=>{const img=new Image();img.onload=()=>{const draw=(m,q)=>{const k=Math.min(1,m/Math.max(img.width,img.height)),c=document.createElement('canvas');c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);c.getContext('2d').drawImage(img,0,0,c.width,c.height);return c.toDataURL('image/jpeg',q)};cb(draw(max||520,.72),big?draw(big,.9):null)};img.src=fr.result};fr.readAsDataURL(file)}
+let PHAI=null;
 function photoField(){return `<p class="label" style="margin:18px 0 8px">Foto do pacote</p><label class="photo-in" for="photoIn"><img id="photoPrev" alt="" ${PH?`src="${PH}"`:'hidden'}><span id="photoTxt">${PH?'Trocar foto':'+ Tirar ou escolher foto'}</span></label><input type="file" id="photoIn" accept="image/*" hidden>`}
+function locs(){return (S.locais&&S.locais.length)?S.locais:[{id:'casa',nome:'Casa'}]}
+function locNome(id,st){const l=locs().find(x=>x.id===id);return l?l.nome:((st&&st.locNome)||'Outro local')}
+function stLoc(st){return (st&&st.loc)||locs()[0].id}
+let estLoc='todos',LOCPICK=null;
+function locPicker(){LOCPICK=LOCPICK||S.locAtivo||locs()[0].id;return `<p class="label" style="margin:18px 0 8px">Onde fica este pacote</p><div class="gchips" id="locPick" style="margin-top:0">${locs().map(l=>`<button class="${LOCPICK===l.id?'on':''}" data-act="pickLoc" data-id="${l.id}">${l.nome}</button>`).join('')}<button data-act="locSheet">+ Novo local</button></div>`}
+const NOTA_TXT=['','Não gostei','Mais ou menos','Bom','Muito bom','Amei'];
+function cafeNota(id){return (S.cafeNotas||{})[id]||0}
+function notaPick(id){const n=cafeNota(id);return `<div class="nota-pick" role="group" aria-label="Sua nota para este café">${[1,2,3,4,5].map(k=>`<button class="${k<=n?'on':''}" data-act="cafeNota" data-id="${id}" data-n="${k}" aria-label="${k} de 5: ${NOTA_TXT[k]}">★</button>`).join('')}<span>${n?NOTA_TXT[n]:'Toque para dar nota'}</span></div>`}
 function firstName(){return (S.name||'').trim().split(' ')[0]}
 function lastHero(L,c){const r=recipeById(L.r);if(!r)return'';const p=compute(r,{dose:L.dose,roast:L.roast||'media',sweet:L.sweet||0,body:L.body||0});const lc=coffeeById(L.c)||c;
   return `<article class="hero">${seal('h').replace('class="seal"','class="seal bigseal"')}
@@ -876,7 +968,7 @@ const VIEWS={
     const week=S.diary.filter(x=>Date.now()-x.at<7*864e5).length;
     const date=new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
     return `
-    <section class="hello"><p class="label">${date}</p><h1>${greet()}${firstName()?', '+firstName():''}. O que vamos coar hoje?</h1></section>
+    <section class="hello"><p class="label">${date}</p><h1>${greet()}${firstName()?', '+firstName():''}. O que vamos coar hoje?</h1>${locs().length>1?`<div class="here"><span class="label">Você está em</span>${locs().map(l=>`<button class="${S.locAtivo===l.id?'on':''}" data-act="setLoc" data-id="${l.id}">${l.nome}</button>`).join('')}</div>`:''}</section>
     ${lowSt&&stIn.low?`<section class="sec" style="margin-top:18px"><button class="card renew-banner" data-act="renew" data-id="${c.id}"><span class="label" style="color:var(--agnus)">${stIn.left?'Seu café está acabando':'Seu café acabou'}</span><span class="cname" style="display:block;margin-top:4px">${c.name}: ${stIn.left?'restam '+stIn.left+' g':'pacote vazio'}</span><span class="notes">Renove, experimente um parecido ou assine.</span><span class="arrow" aria-hidden="true">→</span></button></section>`:''}
     ${H?`<article class="hero">
       ${seal('h').replace('class="seal"','class="seal bigseal"')}
@@ -924,12 +1016,12 @@ const VIEWS={
       <div class="card"><p class="label">Esta semana</p><p class="big" style="margin-top:16px">${week}<small> preparos</small></p><button class="mini-btn" data-act="tab" data-id="diario">Ver diário</button></div>
       ${(()=>{const it=stockList(),op=it.filter(x=>x.si.left>0),tot=op.reduce((a,x)=>a+x.si.left,0);return `<button class="card" style="text-align:left" data-act="tab" data-id="cafes"><p class="label">Estoque</p><p class="big" style="margin-top:16px">${tot}<small> g</small></p><p class="notes">${op.length} pacote${op.length===1?'':'s'} aberto${op.length===1?'':'s'}</p></button>`})()}
     </section>
+    ${recsBlock()}
     <section class="sec"><div class="club-teaser">
-      <span class="tag red">Em breve</span>
-      <h3>Caixa Agnus de dezembro</h3>
-      <p class="notes">Três torrefações, um guia de prova em vídeo e o seu diário de degustação.</p>
-      <div class="bags">${['dropit-palmer','unique-bourbon','agnus-1'].map(id=>bagFor(coffeeById(id))).join('')}</div>
-      <button class="cta dark" data-act="tab" data-id="clube">${S.waitlist?'Você está na lista ✓':'Conhecer o clube'}</button>
+      <span class="tag red">${lockIco()} Em breve</span>
+      <h3>Clube Agnus</h3>
+      <p class="notes">Caixas de café, degustações, encontros e viagens. Abre quando a comunidade bater a meta.</p>
+      <button class="cta dark" data-act="tab" data-id="clube">${S.preClube?'Pré-cadastro feito ✓':'Fazer meu pré-cadastro'}</button>
     </div></section>`;
   },
   receitas(){
@@ -974,7 +1066,7 @@ const VIEWS={
     const pm=m?m-1:11,py=m?y:y-1,cur=S.diary.filter(x=>inM(x,m,y)),prev=S.diary.filter(x=>inM(x,pm,py)),diff=cur.length-prev.length;
     const mc={};cur.forEach(x=>{const r=recipeById(x.r);if(r)mc[r.m]=(mc[r.m]||0)+1});const top=Object.entries(mc).sort((a,b)=>b[1]-a[1])[0];
     const best=cur.length?Math.max(...cur.map(x=>x.rate)):null;
-    const row=(x,i)=>{const r=recipeById(x.r),c=coffeeById(x.c)||{brand:'',name:'Café'};if(!r)return'';const t=new Date(x.at);return `<div class="take"><div class="tk">Take<b>${String(x.n).padStart(2,'0')}</b></div><div><h4>${METHODS[r.m]} · ${r.name}</h4><p>${c.name} · ${diaMode==='dia'?t.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}):t.toLocaleDateString('pt-BR',{day:'2-digit',month:'short'})} · ${x.dose} g${x.grindUsed!=null?' · '+(x.grinder||'moagem')+' '+fmtG(x.grindUsed):''}${x.tags&&x.tags.length?' · '+x.tags.join(', '):''}</p></div><div style="text-align:right">${stars(x.rate)}<button class="link" style="display:block;margin-top:6px;margin-left:auto" data-act="repeatTake" data-id="${i}">↻ Repetir</button></div></div>`};
+    const row=(x,i)=>{const r=recipeById(x.r),c=coffeeById(x.c)||{brand:'',name:'Café'};if(!r)return'';const t=new Date(x.at);return `<div class="take"><div class="tk">Take<b>${String(x.n).padStart(2,'0')}</b></div><div><h4>${METHODS[r.m]} · ${r.name}</h4><p>${c.name} · ${diaMode==='dia'?t.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}):t.toLocaleDateString('pt-BR',{day:'2-digit',month:'short'})} · ${x.dose} g${x.grindUsed!=null?' · '+(x.grinder||'moagem')+' '+fmtG(x.grindUsed):''}${x.pct&&x.pct<100?' · bebeu '+x.pct+'%':''}${x.tags&&x.tags.length?' · '+x.tags.join(', '):''}${x.obs?'<br><i>'+x.obs.replace(/[<>&]/g,'')+'</i>':''}</p></div><div style="text-align:right">${stars(x.rate)}<button class="link" style="display:block;margin-top:6px;margin-left:auto" data-act="repeatTake" data-id="${i}">↻ Repetir</button></div></div>`};
     const day=new Date();day.setDate(day.getDate()+diaDay);const dk=day.toDateString();
     const dayItems=S.diary.map((x,i)=>[x,i]).filter(([x])=>dayKey(x.at)===dk).reverse();
     const dayMg=S.caffeine.filter(x=>dayKey(x.t)===dk).reduce((a,b)=>a+b.mg,0);
@@ -996,48 +1088,49 @@ const VIEWS={
     </section>`;
   },
   clube(){
+    const fr=FRIENDS,feed=comFeed(),loved=comLoved(),pct=Math.min(100,Math.round(CLUBE_COUNT/Math.max(1,CLUBE_META)*100));
     return `
-    <section class="club-hero">${seal('c').replace('class="seal"','class="seal bigseal"')}
-      <p class="label" style="color:#9B9B9B">Clube Agnus</p>
-      <h1>Três cafés novos todo mês, na sua casa.</h1>
-      <p>Cada mês, três marcas diferentes. No mês seguinte, outras três. Entre para receber a caixa, guardar seu diário na nuvem e reservar lugar nos encontros.</p>
-      <div class="login"><button class="solid" data-act="login">Continuar com Google</button><button data-act="login">Entrar com e-mail</button></div>
+    <h1 class="page-title">Comunidade</h1>
+    <p class="lede">Receitas de quem você adiciona, os cafés que a galera mais gostou e o Clube Agnus chegando.</p>
+    ${USER?`<section class="sec" style="margin-top:6px"><div class="sec-h"><p class="label">Seus amigos${fr.length?' · '+fr.length:''}</p><a data-act="addFriendSheet">+ Adicionar</a></div>
+      ${fr.length?`<div class="hscroll">${fr.map(f=>{const d=f.dados||{},top=(d.fav||[])[0];return `<button class="friend" data-act="friend" data-id="${f.user_id}"><span class="av">${esc((f.nome||'?')[0]).toUpperCase()}</span><span class="cname" style="font-size:16px">${esc(f.nome||'Amigo')}</span><span class="notes">${d.n||0} preparo${d.n===1?'':'s'}${(d.metodos||[])[0]?' · '+METHODS[d.metodos[0]]:''}</span>${top?`<span class="notes">♥ ${esc(top.name)}</span>`:''}</button>`}).join('')}</div>`
+      :`<button class="card invite" data-act="addFriendSheet"><span class="label" style="color:var(--agnus)">Seu código: ${myCode()}</span><span class="cname" style="display:block;margin-top:6px">Adicione amigos e veja as receitas deles</span><span class="notes">Mande seu código ou digite o de alguém. Vocês passam a ver as receitas e os cafés favoritos um do outro.</span><span class="arrow" aria-hidden="true">→</span></button>`}
+      <label class="chk" style="margin-top:12px"><input type="checkbox" id="shareAll" ${S.compartilhar?'checked':''}> Mostrar minhas receitas para toda a comunidade</label></section>`
+    :`<section class="sec"><div class="card"><p class="label">Comunidade</p><p class="cname" style="margin-top:6px">Entre para adicionar amigos e ver receitas</p><p class="notes">Seus preparos ficam salvos na nuvem e você escolhe quem vê.</p><button class="pill-btn solid" style="margin-top:12px" data-act="login">Entrar</button></div></section>`}
+    <section class="sec"><div class="sec-h"><p class="label">Receitas da comunidade</p></div>
+      ${feed.length?`<div class="rlist">${feed.slice(0,12).map((t,i)=>`<button class="rcard" data-act="comTake" data-id="${i}"><span class="mi">${icon(t.m)}</span><span><span class="label">${esc(t.who)} · ${METHODS[t.m]||''}</span><h3>${esc(t.rn)}</h3><p class="by">${t.cafe?esc(t.cafe)+' · ':''}${t.dose} g · 1:${fmtRatio(t.ratio||t.water/t.dose)}</p></span><span class="rt">${stars(t.rate||0)}</span></button>`).join('')}</div>`
+      :`<p class="notes">${USER?'Quando seus amigos prepararem um café, as receitas aparecem aqui.':'Entre para ver as receitas da comunidade.'}</p>`}
     </section>
-    <section class="sec"><div class="club-teaser">
-      <span class="tag red">Dezembro · lista de espera</span>
-      <h3>A Caixa Agnus</h3>
-      <p class="notes">Três cafés de três torrefações diferentes, um vídeo de prova gravado com cada produtor e uma ficha para avaliar no app. Sua nota volta para a marca. Em janeiro, a caixa muda inteira.</p>
-      <div class="months"><span class="on">DEZ · Dropit · Unique · Agnus</span><span>JAN · 3 marcas novas</span><span>FEV · surpresa</span></div>
-      <div class="bags">${['dropit-palmer','unique-bourbon','agnus-1'].map(id=>bagFor(coffeeById(id))).join('')}</div>
-      <button class="cta ${S.waitlist?'dark':'red'}" data-act="waitlist">${S.waitlist?'Você está na lista ✓':'Entrar na lista de espera'}</button>
+    ${loved.length?`<section class="sec"><p class="label" style="margin-bottom:8px">Cafés que a comunidade amou</p><div class="picklist">${loved.slice(0,6).map(c=>`<div class="ccard" style="flex-direction:row;align-items:center;gap:14px"><span class="mini-stars big">${'★'.repeat(Math.round(c.nota))}</span><span style="flex:1"><span class="label">${esc(c.brand)}</span><span class="cname" style="display:block;font-size:18px">${esc(c.name)}</span><span class="notes">${c.n>1?c.n+' pessoas deram':'1 pessoa deu'} nota alta</span></span></div>`).join('')}</div></section>`:''}
+    <section class="sec"><div class="club-lock">
+      <span class="tag red">${lockIco()} Em construção</span>
+      <h2>Clube Agnus</h2>
+      <p class="it">(cafés que contam histórias, vividos juntos)</p>
+      <p>O clube nasce da comunidade. Quando a gente bater a meta de pessoas pré-cadastradas, abrimos as assinaturas: caixas de café de torrefações diferentes, degustações juntos numa cafeteria, encontros para se conhecer e trocar ideia, e viagens de café.</p>
+      <div class="meta-bar"><div class="sec-h" style="margin:0"><span class="label">${CLUBE_COUNT} de ${CLUBE_META} pré-cadastros</span><span class="label">${pct}%</span></div><div class="meter"><i style="width:${pct}%"></i></div></div>
+      <div class="locked-list">${[['Caixa Agnus','3 cafés de 3 marcas diferentes por mês, com ficha de prova'],['Degustações','Um dia numa cafeteria, todo mundo provando junto'],['Encontros','Gente do café se conhecendo e trocando receita'],['Viagens de café','Visitas a fazendas e torrefações'],['Pacotes de assinante','Descontos, frete e brindes nos cafés do clube']].map(([t,d])=>`<div class="lk">${lockIco()}<div><b>${t}</b><span>${d}</span></div></div>`).join('')}</div>
+      <button class="cta ${S.preClube?'dark':'red'}" data-act="preClube">${S.preClube?'Pré-cadastro feito ✓':'Fazer meu pré-cadastro'}</button>
+      <p class="disclaim" style="color:#C8C8C8">Assinatura ainda fechada. O pré-cadastro não cobra nada: só avisamos você primeiro.</p>
     </div></section>
-    <section class="sec"><div class="sec-h"><p class="label">Loja do clube</p><span class="tag red">Assinantes</span></div>
-      <p class="notes" style="margin:-4px 0 10px">Gostou de um café da caixa? Compre o pacote cheio com vantagem de assinante.</p>
-      <div class="hscroll">${BOX.map(id=>{const c=coffeeById(id);return `<button class="shop" data-act="coffee" data-id="${id}">${bagFor(c).replace('class="bag','style="width:100%;height:96px;flex:none" class="bag')}<span class="label">${c.brand}</span><span class="cname" style="font-size:16px">${c.name}</span><span class="tag fill" style="align-self:flex-start">−15% assinante</span></button>`}).join('')}</div>
-      <div class="perks"><div><b>−15%</b><span>em todo café da caixa</span></div><div><b>Frete</b><span>grátis a partir de 2 pacotes</span></div><div><b>Xícara</b><span>Agnus de brinde na 3ª compra</span></div></div>
-      <p class="disclaim">Benefícios de exemplo para o protótipo.</p>
+    <section class="sec"><p class="label" style="margin-bottom:4px">Ideias de encontros · ${lockIco()} em breve</p>
+      <div class="card">${EVENTS.map(e=>`<div class="event"><div class="date"><b>${e.d}</b><small>${e.mo}</small></div><div><h4>${e.t}</h4><p>${e.p}</p></div><button class="join ${S.events.includes(e.id)?'on':''}" data-act="event" data-id="${e.id}">${S.events.includes(e.id)?'Tenho interesse ✓':'Tenho interesse'}</button></div>`).join('')}</div>
     </section>
-    <section class="sec"><p class="label" style="margin-bottom:4px">Encontros</p>
-      <div class="card">${EVENTS.map(e=>`<div class="event"><div class="date"><b>${e.d}</b><small>${e.mo}</small></div><div><h4>${e.t}</h4><p>${e.p}</p></div><button class="join ${S.events.includes(e.id)?'on':''}" data-act="event" data-id="${e.id}">${S.events.includes(e.id)?'Na lista':'Quero ir'}</button></div>`).join('')}</div>
-    </section>
-    <section class="sec row2">
-      <div class="card"><p class="label">Comunidade</p><p class="cname" style="margin-top:8px">Grupo dos cafezeiros</p><p class="notes">Troca de receitas e cafés provados.</p><button class="mini-btn" data-act="soon">Em breve</button></div>
-      <div class="card"><p class="label">Para marcas</p><p class="cname" style="margin-top:8px">Seja torrefação parceira</p><p class="notes">Entre na caixa e receba as notas da comunidade.</p><button class="mini-btn" data-act="soon">Em breve</button></div>
-    </section>
+    <section class="sec"><div class="card"><p class="label">Para marcas</p><p class="cname" style="margin-top:8px">Seja torrefação parceira</p><p class="notes">Entre na caixa do clube e receba as notas da comunidade.</p><a class="mini-btn" href="mailto:agnusfilmsco@gmail.com?subject=Parceria%20Agnus%20Coffee" style="display:inline-block;text-decoration:none">Falar com a Agnus</a></div></section>
     ${(isTeam||!SB)?radarView():''}`;
   }
 };
 function estoqueView(){
-  const items=stockList(),open=items.filter(x=>x.si.left>0),total=open.reduce((a,x)=>a+x.si.left,0);
+  const allIt=stockList(),multi=locs().length>1,items=estLoc==='todos'?allIt:allIt.filter(x=>stLoc(x.st)===estLoc),open=items.filter(x=>x.si.left>0),total=open.reduce((a,x)=>a+x.si.left,0);
   const F={todos:()=>true,disponiveis:x=>x.si.left>0,finalizados:x=>x.si.left<=0,frescos:isFresh,congelados:x=>x.st.frozen};
   const fin=items.filter(F.finalizados).length,list=items.filter(F[estFilter]).sort((a,b)=>(b.si.left>0)-(a.si.left>0)||a.si.left-b.si.left);
-  return `<button class="casa-cta" data-act="casa">${CASA?`<span class="label" style="color:var(--agnus)">Estoque da casa</span><b>${CASA.nome}</b><span class="notes">${CASA.membros.length} pessoa${CASA.membros.length>1?'s':''} · cada preparo desconta para todos</span>`:`<span class="label">Família, amigos, escritório</span><b>Dividir o estoque com a casa</b><span class="notes">Todo mundo vê o que tem, o que acabou e o que está congelado.</span>`}<span class="arrow" aria-hidden="true">→</span></button>
+  return `<div class="filters loc-row" style="margin:0 0 12px">${[['todos','Todos os locais'],...locs().map(l=>[l.id,l.nome])].map(([k,n])=>`<button class="f ${estLoc===k?'on':''}" data-act="eloc" data-id="${k}">${k!=='todos'?'<svg class="ico" viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg> ':''}${n}</button>`).join('')}<button class="f" data-act="locSheet">+ Local</button></div>
+  <button class="casa-cta" data-act="casa">${CASA?`<span class="label" style="color:var(--agnus)">Estoque da casa</span><b>${CASA.nome}</b><span class="notes">${CASA.membros.length} pessoa${CASA.membros.length>1?'s':''} · cada preparo desconta para todos</span>`:`<span class="label">Família, amigos, escritório</span><b>Dividir o estoque com a casa</b><span class="notes">Todo mundo vê o que tem, o que acabou e o que está congelado.</span>`}<span class="arrow" aria-hidden="true">→</span></button>
   <button class="shelf-cta" data-act="shelf"><span class="shelf-ico" aria-hidden="true"><svg class="ico" viewBox="0 0 32 32"><path d="M5 10h4l2-3h10l2 3h4v15H5z"/><circle cx="16" cy="17" r="5"/></svg></span><span><b>Fotografe seu estoque</b><span class="notes" style="display:block">Uma foto de todos os pacotes. O app identifica cada café e cadastra de uma vez.</span></span></button>
-  <div class="est-hero"><div><p class="label">Estoque total</p><p class="est-total num">${total}<small> g</small></p><p class="est-sub">${open.length} pacote${open.length===1?'':'s'} aberto${open.length===1?'':'s'}${fin?' · '+fin+' finalizado'+(fin>1?'s':''):''}</p></div>${lamb()}</div>
+  <div class="est-hero"><div><p class="label">${estLoc==='todos'?'Estoque total':'Estoque · '+locNome(estLoc)}</p><p class="est-total num">${total}<small> g</small></p><p class="est-sub">${open.length} pacote${open.length===1?'':'s'} aberto${open.length===1?'':'s'}${fin?' · '+fin+' finalizado'+(fin>1?'s':''):''}</p></div>${lamb()}</div>
   <div class="filters" style="margin-top:14px">${[['todos','Todos'],['disponiveis','Disponíveis'],['finalizados','Finalizados'+(fin?' ('+fin+')':'')],['frescos','Frescos'],['congelados','Congelados']].map(([k,n])=>`<button class="f ${estFilter===k?'on':''}" data-act="efilter" data-id="${k}">${n}</button>`).join('')}</div>
   ${list.length?`<div class="sgrid">${list.map(x=>`<button class="scard ${x.si.left<=0?'done':''}" data-act="stockDetail" data-id="${x.id}">
     <span class="sphoto">${x.st.photo?`<img src="${x.st.photo}" alt="Pacote de ${x.c.name}">`:bagFor(x.c)+'<span class="addph">+ Foto</span>'}<span class="wbadge ${x.si.left>0&&x.si.low?'warn':''}">${x.si.left>0&&x.si.low?'⚠ ':''}${x.si.left>0?x.si.left+'g':'Acabou'}</span>${x.st.frozen?'<span class="frz">❄</span>':''}</span>
-    <span class="sinfo"><span class="cname">${x.c.name}</span><span class="label">${x.c.brand}</span><span class="notes">${x.st.frozen?'Congelado':torradoHa(x.st.roastDate)}</span></span></button>`).join('')}</div>`
+    <span class="sinfo"><span class="cname">${x.c.name}</span><span class="label">${x.c.brand}</span><span class="notes">${x.st.frozen?'Congelado':torradoHa(x.st.roastDate)}</span>${cafeNota(x.id)?`<span class="mini-stars" aria-label="Nota ${cafeNota(x.id)} de 5">${'★'.repeat(cafeNota(x.id))}</span>`:''}${multi&&estLoc==='todos'?`<span class="loc-pill">${locNome(stLoc(x.st),x.st)}</span>`:''}</span></button>`).join('')}</div>`
   :`<div class="empty"><p>${items.length?'Nenhum café com esse filtro.':'Seu estoque está vazio. Cadastre o pacote que está na sua casa: foto, peso e data de torra.'}</p>${items.length?'':'<button class="pill-btn solid" data-act="addCoffee">+ Novo café</button>'}</div>`}
   ${items.length?'':'<button class="link" style="display:block;margin:16px auto" data-act="demo">Ver com dados de exemplo</button>'}`;
 }
@@ -1047,6 +1140,63 @@ function coffeeList(){
   if(!list.length)return '<p class="notes" style="grid-column:1/-1">Nada com esse filtro. Tente outra torra ou perfil.</p>';
   return list.map(c=>`<button class="ccard" data-act="coffee" data-id="${c.id}"><div class="top-row">${bagFor(c).replace('class="bag','style="flex-basis:40px;height:52px;width:40px" class="bag')}${S.coffeeId===c.id?'<span class="tag fill">No moedor</span>':c.mine?'<span class="tag">Meu</span>':c.house?'<span class="tag red">Nosso</span>':''}</div><div><p class="label">${c.brand}</p><p class="cname" style="font-size:19px">${c.name}</p><p class="notes">${c.notes.join(' · ')}</p></div><p class="label" style="color:var(--ink)">Torra${roastDots(c.roast)}</p></button>`).join('');
 }
+
+
+/* ---------- comunidade ---------- */
+let FRIENDS=[],FEEDV=[],CLUBE_COUNT=0,CLUBE_META=200,RECS=null,COM_T=0,COMFEED=[],lastVit='';
+const esc=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function lockIco(){return '<svg class="ico lock" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>'}
+function myCode(){return USER?USER.id.replace(/-/g,'').slice(0,6).toUpperCase():''}
+function vitrineDados(){const notas=S.cafeNotas||{};
+  const fav=Object.entries(notas).filter(e=>e[1]>=3).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([id,n])=>{const c=coffeeById(id);return c?{id:id.split('--')[0],brand:c.brand,name:c.name,notes:(c.notes||[]).slice(0,3),roast:c.roast,nota:n}:null}).filter(Boolean);
+  const takes=S.diary.slice(-12).reverse().map(x=>{const r=recipeById(x.r),c=coffeeById(x.c);if(!r)return null;const std=RECIPES.some(q=>q.id===r.id);return{rid:r.id,rn:r.name,m:r.m,au:r.author,rec:std?null:r,cafe:c?c.brand+' '+c.name:null,dose:x.dose,water:x.water,ratio:x.ratio,temp:x.temp,rate:x.rate,sweet:x.sweet||0,body:x.body||0,roast:x.roast||'media',grinder:x.grinder||null,grindUsed:x.grindUsed!=null?x.grindUsed:null,at:x.at}}).filter(Boolean);
+  const mc={};S.diary.forEach(x=>{const r=recipeById(x.r);if(r)mc[r.m]=(mc[r.m]||0)+1});
+  return{fav,takes,n:S.diary.length,metodos:Object.entries(mc).sort((a,b)=>b[1]-a[1]).slice(0,3).map(e=>e[0])}}
+async function pushVitrine(){if(!SB||!USER)return;const nm=firstName()||((USER.user_metadata&&(USER.user_metadata.full_name||USER.user_metadata.name))||'').split(' ')[0]||'Cafezeiro';
+  const row={user_id:USER.id,nome:nm,codigo:myCode(),publico:!!S.compartilhar,dados:vitrineDados()};const k=JSON.stringify(row);if(k===lastVit)return;
+  const {error}=await SB.from('vitrine').upsert(Object.assign({updated_at:new Date().toISOString()},row));if(!error)lastVit=k}
+async function loadPublic(){if(!SB)return;try{const [{data:rc},{data:cf},{data:cnt}]=await Promise.all([SB.from('recomendacoes').select('*').eq('ativo',true).order('ordem'),SB.from('config').select('*'),SB.rpc('contar_pre_cadastro')]);
+  if(rc)RECS=rc;(cf||[]).forEach(c=>{if(c.chave==='clube_meta'&&+c.valor>0)CLUBE_META=+c.valor});if(typeof cnt==='number')CLUBE_COUNT=cnt;if(!document.querySelector('.sheet.open'))render()}catch(e){}}
+async function loadComunidade(force){if(!SB||!USER)return;if(!force&&Date.now()-COM_T<15000)return;COM_T=Date.now();
+  try{await pushVitrine();const {data:am}=await SB.from('amizades').select('amigo_id').eq('user_id',USER.id);const ids=(am||[]).map(a=>a.amigo_id);
+    const [fr,pub,cnt,pc]=await Promise.all([ids.length?SB.from('vitrine').select('*').in('user_id',ids):Promise.resolve({data:[]}),SB.from('vitrine').select('user_id,nome,dados,updated_at').eq('publico',true).neq('user_id',USER.id).order('updated_at',{ascending:false}).limit(40),SB.rpc('contar_pre_cadastro'),SB.from('pre_cadastro_clube').select('user_id').eq('user_id',USER.id).maybeSingle()]);
+    FRIENDS=fr.data||[];FEEDV=pub.data||[];if(typeof cnt.data==='number')CLUBE_COUNT=cnt.data;if(pc.data&&!S.preClube){S.preClube=true;save()}
+  }catch(e){}if(tab==='clube'&&!document.querySelector('.sheet.open'))render()}
+function comFeed(){const seen=new Set(),out=[];[...FRIENDS,...FEEDV].forEach(v=>{if(seen.has(v.user_id))return;seen.add(v.user_id);((v.dados||{}).takes||[]).forEach(t=>out.push(Object.assign({who:v.nome||'Alguém',uid:v.user_id},t)))});out.sort((a,b)=>(b.at||0)-(a.at||0));COMFEED=out;return out}
+function comLoved(){const m={};const seen=new Set();[...FRIENDS,...FEEDV].forEach(v=>{if(seen.has(v.user_id))return;seen.add(v.user_id);((v.dados||{}).fav||[]).filter(f=>f.nota>=4).forEach(f=>{const k=norm(f.brand+' '+f.name);m[k]=m[k]||{brand:f.brand,name:f.name,sum:0,n:0};m[k].sum+=f.nota;m[k].n++})});return Object.values(m).map(x=>Object.assign(x,{nota:x.sum/x.n})).sort((a,b)=>b.n-a.n||b.nota-a.nota)}
+function addFriendSheet(){if(!USER){loginSheet();return}
+  sheet(`<p class="label">Amigos</p><h3>Adicione quem você quer acompanhar</h3>
+  <div class="code-box"><span class="label">Seu código</span><b>${myCode()}</b><button class="pill-btn solid" data-act="shareCode">Enviar convite</button></div>
+  <div class="field" style="margin-top:18px"><label for="friendCode">Código de um amigo</label><input class="txt" id="friendCode" maxlength="6" placeholder="Ex.: A1B2C3" autocapitalize="characters" autocomplete="off" style="text-transform:uppercase;letter-spacing:.2em"></div>
+  <button class="cta dark" style="margin-top:14px" data-act="addFriend">Adicionar amigo</button>
+  <p class="notes" style="margin-top:12px">Vocês dois passam a ver as últimas receitas e os cafés com nota alta um do outro. Dá para desfazer quando quiser.</p>`)}
+function friendSheet(uid){const f=FRIENDS.find(x=>x.user_id===uid);if(!f)return;const d=f.dados||{};
+  sheet(`<div style="display:flex;gap:14px;align-items:center"><span class="av big">${esc((f.nome||'?')[0]).toUpperCase()}</span><div><p class="label">Amigo</p><h3 style="margin:2px 0">${esc(f.nome||'Amigo')}</h3><p class="notes">${d.n||0} preparos${(d.metodos||[]).length?' · '+d.metodos.map(m=>METHODS[m]).join(', '):''}</p></div></div>
+  <div class="block"><p class="label">Cafés favoritos</p>${(d.fav||[]).length?d.fav.map(c=>`<div class="take"><span class="mini-stars big">${'★'.repeat(c.nota)}</span><div><h4>${esc(c.brand)} · ${esc(c.name)}</h4><p>${esc((c.notes||[]).join(' · '))}</p></div><span></span></div>`).join(''):'<p class="notes" style="padding:8px 0">Ainda não deu nota para nenhum café.</p>'}</div>
+  <div class="block"><p class="label">Últimas receitas</p>${(d.takes||[]).length?d.takes.slice(0,8).map((t,i)=>`<button class="take as-btn" data-act="friendTake" data-id="${uid}" data-i="${i}"><span class="mi" style="width:40px;height:40px;border-radius:0;background:var(--bone);display:flex;align-items:center;justify-content:center">${icon(t.m)}</span><div><h4>${esc(t.rn)}</h4><p>${t.cafe?esc(t.cafe)+' · ':''}${t.dose} g · 1:${fmtRatio(t.ratio||t.water/t.dose)}${t.grindUsed!=null?' · moagem '+fmtG(t.grindUsed):''}</p></div><div style="text-align:right">${stars(t.rate||0)}</div></button>`).join(''):'<p class="notes" style="padding:8px 0">Nenhum preparo ainda.</p>'}</div>
+  <button class="del-btn" data-act="rmFriend" data-id="${uid}">Desfazer amizade</button>`)}
+function takeSheet(t){const r=recipeById(t.rid)||t.rec;
+  sheet(`<p class="label">${esc(t.who||'Comunidade')} · ${METHODS[t.m]||''}</p><h3>${esc(t.rn)}</h3><p class="notes">${esc(t.au||'')}${t.cafe?' · com '+esc(t.cafe):''}</p>
+  <div class="pgrid"><div><p class="label">Café</p><b>${t.dose} g</b></div><div><p class="label">Água</p><b>${t.water} ${t.m==='espresso'?'g':'ml'}</b></div><div><p class="label">Temperatura</p><b>${t.temp!=null?t.temp+'°C':'Fria'}</b></div><div><p class="label">Proporção</p><b>1:${fmtRatio(t.ratio||t.water/t.dose)}</b></div></div>
+  <div class="block"><p class="label">Ajuste usado</p><p style="margin-top:6px">${SWEET[(t.sweet||0)+2]} · corpo ${BODY[(t.body||0)+2].toLowerCase()}${t.grindUsed!=null?' · '+esc(t.grinder||'moagem')+' '+fmtG(t.grindUsed):''}</p><p style="margin-top:6px">${stars(t.rate||0)}</p></div>
+  ${r?`<button class="cta dark" style="margin-top:16px" data-act="useTake">Fazer esta receita</button>`:'<p class="notes" style="margin-top:12px">Receita indisponível nesta versão.</p>'}`);TAKE=t}
+let TAKE=null;
+function preClubeSheet(){if(!USER){loginSheet();toast('Entre para fazer o pré-cadastro');return}
+  const nm=S.name||(USER.user_metadata&&(USER.user_metadata.full_name||USER.user_metadata.name))||'';PRE={int:['Caixa mensal','Degustações']};
+  sheet(`<p class="label" style="color:var(--agnus)">Clube Agnus · pré-cadastro</p><h3>Garanta seu lugar na primeira turma</h3><p class="notes">Sem cobrança. Quando o clube abrir, você fica sabendo antes de todo mundo.</p>
+  <div class="field" style="margin-top:14px"><label for="pcNome">Nome</label><input class="txt" id="pcNome" value="${esc(nm)}" autocomplete="name"></div>
+  <div class="field" style="margin-top:12px"><label for="pcCidade">Cidade</label><input class="txt" id="pcCidade" placeholder="Ex.: Brasília" autocomplete="address-level2"></div>
+  <p class="label" style="margin:16px 0 8px">O que mais te interessa</p><div class="gchips" id="pcInt" style="margin-top:0">${['Caixa mensal','Degustações','Encontros','Viagens','Cursos e workshops'].map(x=>`<button class="${PRE.int.includes(x)?'on':''}" data-act="pcInt" data-id="${x}">${x}</button>`).join('')}</div>
+  <button class="cta red" style="margin-top:18px" data-act="savePre">Confirmar pré-cadastro</button>`)}
+let PRE=null;
+function recsBlock(){const base=RECS||[{id:'r1',titulo:'Moedor manual de rebarbas',descricao:'O passo que mais muda a xícara: moagem uniforme na hora.',categoria:'Equipamento',para:'sem_moedor'},{id:'r2',titulo:'Balança com timer',descricao:'Pesa café e água e marca o tempo.',categoria:'Equipamento',para:'sem_balanca'},{id:'r3',titulo:'Chaleira bico de ganso',descricao:'Controle do fio de água para coados.',categoria:'Equipamento',para:'todos'}];
+  if(!base.length)return'';const score=r=>(r.para==='sem_moedor'&&!(S.grinders||[]).length)||(r.para==='sem_balanca'&&S.scale!=='tem')?0:(r.para&&r.para.startsWith('metodo:')&&S.methods.includes(r.para.slice(7)))?1:2;
+  const list=base.filter(r=>r.para!=='sem_moedor'||!(S.grinders||[]).length||true).slice().sort((a,b)=>score(a)-score(b)||(a.ordem||0)-(b.ordem||0));
+  return `<section class="sec"><div class="sec-h"><p class="label">Para começar ou evoluir</p></div><div class="hscroll">${list.map(r=>`<button class="rec-card" data-act="recGo" data-id="${esc(r.id)}"><span class="tag ${r.categoria==='Café'?'fill':''}">${esc(r.categoria||'Dica')}</span><span class="cname">${esc(r.titulo)}</span><span class="notes">${esc(r.descricao||'')}</span><span class="rec-foot">${r.preco?'<b>'+esc(r.preco)+'</b>':''}${r.cupom?'<span class="tag red">'+esc(r.cupom)+'</span>':''}<span class="go">${r.url?'Ver opção →':'Em breve'}</span></span></button>`).join('')}</div></section>`}
+function setLoc(id){S.locAtivo=id;const cur=S.stock[S.coffeeId];let msg='Você está em '+locNome(id);if(!cur||stLoc(cur)!==id||cur.left<=0){const av=stockList().filter(x=>x.si.left>0&&stLoc(x.st)===id).sort((a,b)=>(b.st.at||0)-(a.st.at||0));if(av[0]){S.coffeeId=av[0].id;msg+='. No moedor: '+av[0].c.name}}save();render();toast(msg)}
+function locSheet(){sheet(`<p class="label">Locais do estoque</p><h3>Onde ficam seus cafés</h3><p class="notes">Casa, produtora, escritório… Cada pacote fica num local e o app usa o estoque de onde você está.</p>
+  <div class="loc-list">${locs().map(l=>{const n=Object.values(S.stock||{}).filter(x=>stLoc(x)===l.id&&x.left>0).length;return `<div class="loc-item"><input class="txt locName" data-loc="${l.id}" value="${esc(l.nome)}" aria-label="Nome do local"><span class="notes">${n} pacote${n===1?'':'s'}</span>${locs().length>1?`<button class="link" data-act="delLoc" data-id="${l.id}">Remover</button>`:''}</div>`}).join('')}</div>
+  <div style="display:flex;gap:10px;align-items:flex-end;margin-top:16px"><div class="field" style="flex:1"><label for="newLoc">Novo local</label><input class="txt" id="newLoc" placeholder="Ex.: Produtora" autocomplete="off"></div><button class="pill-btn solid" data-act="addLoc">Adicionar</button></div>`)}
 
 /* ---------- tela de preparo ---------- */
 let B=null;
@@ -1196,16 +1346,19 @@ function adviceFor(t){const g=curGrinder(),u=B&&B.grindUsed!=null&&g?+B.grindUse
   if(u!=null&&(t==='Doce'||t==='Equilibrado'))return `Acertou com ${fmtG(u)} no ${g.name}. O app vai sugerir esse número da próxima vez.`;
   return ADVICE[t]}
 function openRate(){
-  R={rate:4,tags:[]};
+  R={rate:4,tags:[],pct:T.p.water>420?50:100};
   sheet(`<p class="label">Take ${String(S.diary.length+1).padStart(2,'0')} · ${T.r.name}</p><h3>Como ficou a xícara?</h3>
   <div class="cups" id="cups">${[1,2,3,4,5].map(n=>`<button class="${n===4?'on':''}" data-act="rate" data-id="${n}">${n}</button>`).join('')}</div>
   <p class="label" style="margin:14px 0 8px">O que você sentiu</p>
   <div class="tagpick" id="tagpick">${Object.keys(ADVICE).map(t=>`<button data-act="rtag" data-id="${t}">${t}</button>`).join('')}</div>
   <div class="advice" id="advice"><p class="label">Para o próximo take</p><p style="margin-top:6px">Marque o que sentiu e o app sugere o ajuste.</p></div>
+  <p class="label" style="margin:16px 0 4px">Quanto você bebeu?</p><p class="notes" style="margin-bottom:8px">Você preparou cerca de ${T.p.water} ${T.r.engine==='espresso'?'g':'ml'}. A cafeína conta só o que você tomou.</p>
+  <div class="seg seg4" id="pctPick">${[25,50,75,100].map(n=>`<button class="${R.pct===n?'on':''}" data-act="rpct" data-id="${n}">${n}%</button>`).join('')}</div>
+  <div class="field" style="margin-top:14px"><label for="takeObs">Anotação (opcional)</label><input class="txt" id="takeObs" placeholder="Ex.: dividi com a Rebeca, ficou ótimo gelado" autocomplete="off"></div>
   <button class="cta dark" style="margin-top:16px" data-act="saveTake">Salvar no diário</button>`);
 }
 function coffeePicker(){
-  sheet(`<p class="label">Trocar café</p><h3>O que está no moedor?</h3><button class="addbtn" style="margin-top:8px" data-act="addCoffee">+ Adicionar o meu café</button><p class="label" style="margin-top:14px">Do seu estoque</p><div class="picklist">${(()=>{const ids=stockList().filter(x=>x.si.left>0).map(x=>x.id);const rest=allCoffees().filter(c=>!ids.includes(c.id));return [...ids.map(coffeeById),...rest]})().map(c=>`<button class="ccard" style="flex-direction:row;align-items:center;gap:14px" data-act="setCoffee" data-id="${c.id}">${bagFor(c).replace('class="bag','style="flex-basis:40px;height:52px" class="bag')}<span style="flex:1"><span class="label">${c.brand}</span><span class="cname" style="display:block;font-size:19px">${c.name}</span><span class="notes">${c.notes.join(' · ')}</span></span>${S.coffeeId===c.id?'<span class="tag fill">Atual</span>':(()=>{const si=stockInfo(c.id);return si&&si.left>0?`<span class="tag ${si.low?'red':''}">${si.left} g</span>`:''})()}</button>`).join('')}</div>`);
+  sheet(`<p class="label">Trocar café</p><h3>O que está no moedor?</h3><button class="addbtn" style="margin-top:8px" data-act="addCoffee">+ Adicionar o meu café</button><p class="label" style="margin-top:14px">Do seu estoque${locs().length>1?' · '+locNome(S.locAtivo):''}</p><div class="picklist">${(()=>{const av=stockList().filter(x=>x.si.left>0);const ids=[...av.filter(x=>stLoc(x.st)===S.locAtivo),...av.filter(x=>stLoc(x.st)!==S.locAtivo)].map(x=>x.id);const rest=allCoffees().filter(c=>!ids.includes(c.id));return [...ids.map(coffeeById),...rest]})().map(c=>`<button class="ccard" style="flex-direction:row;align-items:center;gap:14px" data-act="setCoffee" data-id="${c.id}">${bagFor(c).replace('class="bag','style="flex-basis:40px;height:52px" class="bag')}<span style="flex:1"><span class="label">${c.brand}</span><span class="cname" style="display:block;font-size:19px">${c.name}</span><span class="notes">${c.notes.join(' · ')}</span></span>${S.coffeeId===c.id?'<span class="tag fill">Atual</span>':(()=>{const si=stockInfo(c.id);return si&&si.left>0?`<span class="tag ${si.low?'red':''}">${si.left} g${locs().length>1&&stLoc(S.stock[c.id])!==S.locAtivo?' · '+locNome(stLoc(S.stock[c.id]),S.stock[c.id]):''}</span>`:''})()}</button>`).join('')}</div>`);
 }
 function coffeeSheet(id){
   const c=coffeeById(id);const rec=c.roast==='escura'?'hoffmann-press':c.profile==='frutado'||c.profile==='floral'?'kasuya':'hoffmann-v60';const r=recipeById(rec);
@@ -1267,15 +1420,15 @@ function renderCaf(){
   animateRings();
 }
 document.addEventListener('change',e=>{
-  if(e.target.id==='shelfIn'&&e.target.files[0])readPhoto(e.target.files[0],u=>{SH.photo=u;const im=$('#shelfPrev');im.src=u;im.hidden=false;$('#shelfTxt').textContent='Trocar foto';identifyShelf()},1400);
-  if(e.target.id==='photoIn'&&e.target.files[0])readPhoto(e.target.files[0],u=>{PH=u;const im=$('#photoPrev');im.src=u;im.hidden=false;$('#photoTxt').textContent='Trocar foto';if($('#aiBox'))identifyPhoto()});
+  if(e.target.id==='shelfIn'&&e.target.files[0])readPhoto(e.target.files[0],(u,big)=>{SH.photo=u;SH.big=big;const im=$('#shelfPrev');im.src=u;im.hidden=false;$('#shelfTxt').textContent='Trocar foto';identifyShelf()},1400,2400);
+  if(e.target.id==='photoIn'&&e.target.files[0])readPhoto(e.target.files[0],(u,big)=>{PH=u;PHAI=big;const im=$('#photoPrev');im.src=u;im.hidden=false;$('#photoTxt').textContent='Trocar foto';if($('#aiBox'))identifyPhoto()},520,2000);
   if(e.target.id==='photoEdit'&&e.target.files[0]){const id=e.target.dataset.id;readPhoto(e.target.files[0],u=>{S.stock[id].photo=u;save();stockDetail(id);render();uploadPhoto(id,u);toast('Foto atualizada')})}
   if(['pW','pH','pPreg'].includes(e.target.id)){S.profile={weight:$('#pW').value,height:$('#pH').value,preg:$('#pPreg').checked};save();renderCaf();toast('Limite recalculado: '+cafLimit()+' mg')}
 });
 
 /* ---------- adicionar café ---------- */
 let AC=null;
-function addCoffeeSheet(){
+function addCoffeeSheet(){LOCPICK=S.locAtivo;PHAI=null;
   const f=(id,l,ph,t)=>`<div class="field" style="margin-top:12px"><label for="${id}">${l}</label><input class="txt" id="${id}" ${t?'type="'+t+'"':''} placeholder="${ph||''}" autocomplete="off"></div>`;
   sheet(`<p class="label">Novo café no estoque</p><h3>Fotografe o pacote</h3><p class="notes">O app lê o rótulo e preenche tudo: marca, café, origem, torra, peso e notas. De qualquer país.</p>
   ${photoField()}
@@ -1284,6 +1437,7 @@ function addCoffeeSheet(){
   <div id="acForm">
   ${f('acBrand','Marca ou torrefação','Ex.: Café Cuervo')}${f('acName','Nome do café','Ex.: Catuaí Amarelo')}
   <div class="f2">${f('acCountry','País','Brasil')}${f('acRegion','Região','Mantiqueira de Minas')}</div>
+  <div class="f2">${f('acFarm','Fazenda ou produtor','Fazenda Santa Inês')}${f('acAlt','Altitude (m)','1200','number')}</div>
   <div class="f2">${f('acVariety','Variedade','Catuaí')}${f('acProcess','Processo','Natural')}</div>
   ${f('acNotes','Notas (separe por vírgula)','chocolate, caramelo')}
   <p class="label" style="margin:18px 0 8px">Torra</p><div class="seg" id="acR">${['clara','media','escura'].map(x=>`<button class="${AC.roast===x?'on':''}" data-act="acRoast" data-id="${x}">${ROAST[x]}</button>`).join('')}</div>
@@ -1292,6 +1446,7 @@ function addCoffeeSheet(){
   <p class="notes" id="acFillNote" style="margin-top:6px"></p>
   <div class="f2">${f('acDate','Data de torra','','date')}${f('acSeller','Onde comprou','Loja, site ou cafeteria')}</div>
   <label class="chk"><input type="checkbox" id="acFrz"> Pacote congelado</label>
+  ${locPicker()}
   </div>
   <button class="cta dark" style="margin-top:20px" data-act="saveCoffee">Salvar no estoque</button>`);
 }
@@ -1304,28 +1459,28 @@ function dataToBlob(u){const [h,b]=u.split(',');const bin=atob(b),a=new Uint8Arr
 async function identifyPhoto(){
   const box=$('#aiBox');if(!box||!PH)return;box.hidden=false;
   if(!iaReady()){box.innerHTML=`<p class="label">Leitura do rótulo</p><p class="notes" style="margin-top:4px">${SB?'Entre na sua conta para o app ler o rótulo pela foto.':'A leitura por IA precisa do servidor configurado.'} Você pode preencher os campos abaixo.</p>${SB?'<button class="pill-btn solid" style="margin-top:10px" data-act="login">Entrar</button>':''}`;return}
-  box.innerHTML=`<div class="ai-scan"><i></i></div><p class="label" style="color:var(--agnus)">Lendo o rótulo…</p><p class="notes">Marca, origem, torra, peso e notas.</p>`;
+  box.innerHTML=`<div class="ai-scan"><i></i></div><p class="label" style="color:var(--agnus)">Lendo o rótulo…</p><p class="notes">Lendo cada linha do rótulo: marca, fazenda, origem, torra, peso, data e notas.</p>`;
   const prompt=`Você recebe a foto de um pacote de café, que pode ser de qualquer país e em qualquer idioma. Leia o rótulo com atenção e responda SOMENTE um objeto JSON, sem texto fora dele, com estas chaves:
 {"brand":texto|null,"name":texto|null,"country":texto em português|null,"region":texto|null,"producer":texto|null,"variety":texto|null,"process":texto em português|null,"roast":"clara"|"media"|"escura"|null,"species":"arabica"|"blend"|"conilon"|"descaf"|null,"notes":[até 4 notas sensoriais em português],"weight_g":número|null,"roast_date":"AAAA-MM-DD"|null,"altitude_m":número|null,"seller":texto|null,"confidence":"alta"|"media"|"baixa"}
 Regras: use null quando algo não estiver legível; não invente marca, data ou peso. "country" é o país de origem do grão. "seller" só se o rótulo indicar loja ou cafeteria. Torra média-clara conta como "clara"; média-escura como "escura".`;
   try{
-    const r=await callIA('single',PH);AI=r||{};fillFromAI(AI);
+    const r=await callIA('single',PHAI||PH);AI=r||{};fillFromAI(AI);
   }catch(e){box.innerHTML=`<p class="label">Não consegui ler o rótulo</p><p class="notes" style="margin-top:4px">${e&&e.code==='rate_limited'?'Muitas leituras seguidas. Tente de novo em instantes.':'Tente uma foto mais de frente e com luz, ou preencha abaixo.'}</p>${e&&(e.code||e.message)?`<p class="disclaim">Detalhe: ${String(e.code||'')} ${String(e.message||'').slice(0,120)}</p>`:''}`}
 }
 let AI=null;
-function fillFromAI(r){
+function fillFromAI(r){AI=r;
   const set=(id,v)=>{if(v!=null&&v!==''&&$('#'+id))$('#'+id).value=v};
-  set('acBrand',r.brand);set('acName',r.name);set('acCountry',r.country);set('acRegion',r.region||r.producer);set('acVariety',r.variety);set('acProcess',r.process);
+  set('acBrand',r.brand);set('acName',r.name);set('acCountry',r.country);set('acRegion',r.region);set('acFarm',[r.farm,r.producer].filter(Boolean).join(' · '));set('acAlt',r.altitude_m);set('acVariety',r.variety);set('acProcess',r.process);
   if(r.notes&&r.notes.length)set('acNotes',r.notes.join(', '));set('acDate',r.roast_date);set('acSeller',r.seller);
   if(['clara','media','escura'].includes(r.roast)){AC.roast=r.roast;segOn('#acR',r.roast)}
   if(SPECIES[r.species]){AC.species=r.species;segOn('#acS',r.species)}
   if(r.weight_g>0){AC.pack=Math.round(r.weight_g);segOn('#acP',AC.pack)}
   $('#acFillNote').textContent=(r.weight_g&&![250,500,1000].includes(Math.round(r.weight_g))?'Pacote de '+Math.round(r.weight_g)+' g lido no rótulo. ':'')+'Entra cheio no estoque. Cada preparo desconta a dose usada.';
   const st=brandStatus(r.brand),b=BSTAT[st];
-  $('#aiBox').innerHTML=`<p class="label" style="color:var(--agnus)">Identificado · confiança ${r.confidence||'média'}</p><p class="cname" style="margin-top:4px">${r.brand||'Marca não legível'}${r.name?' · '+r.name:''}</p><p class="notes">${[r.country,r.region,r.variety,r.process].filter(Boolean).join(' · ')||'Origem não informada no rótulo'}</p><span class="tag ${b[1]}" style="margin-top:8px;display:inline-block">${b[0]}</span><p class="disclaim">Confira os campos abaixo antes de salvar.</p>`;
+  $('#aiBox').innerHTML=`<p class="label" style="color:var(--agnus)">Identificado · confiança ${r.confidence||'média'}</p><p class="cname" style="margin-top:4px">${r.brand||'Marca não legível'}${r.name?' · '+r.name:''}</p><p class="notes">${[r.country,r.region,r.variety,r.process].filter(Boolean).join(' · ')||'Origem não informada no rótulo'}</p><span class="tag ${b[1]}" style="margin-top:8px;display:inline-block">${b[0]}</span>${r.score?`<p class="notes">Pontuação ${r.score} SCA</p>`:''}${r.raw_text?`<details class="raw"><summary>Texto lido no rótulo</summary><p>${String(r.raw_text).replace(/[<>&]/g,'').replace(/\n/g,'<br>')}</p></details>`:''}<p class="disclaim">Confira os campos abaixo antes de salvar.</p>`;
 }
 let SH=null;
-function shelfSheet(){SH={photo:null,items:[]};
+function shelfSheet(){SH={photo:null,items:[]};LOCPICK=S.locAtivo;
   sheet(`<p class="label">Estoque em uma foto</p><h3>Fotografe todos os seus pacotes</h3><p class="notes">Coloque os pacotes lado a lado, com os rótulos virados para a câmera. O app identifica cada um.</p>
   <label class="photo-in shelf-in" for="shelfIn"><img id="shelfPrev" alt="" hidden><span id="shelfTxt">+ Tirar ou escolher foto do estoque</span></label><input type="file" id="shelfIn" accept="image/*" hidden>
   <div id="shelfBox"></div>`)}
@@ -1338,7 +1493,7 @@ async function identifyShelf(){
   const prompt=`Você recebe uma foto com um ou mais pacotes de café (estoque de uma pessoa), de qualquer país e idioma. Identifique CADA pacote visível e responda SOMENTE um objeto JSON:
 {"packages":[{"brand":texto|null,"name":texto|null,"country":texto em português|null,"region":texto|null,"variety":texto|null,"process":texto em português|null,"roast":"clara"|"media"|"escura"|null,"species":"arabica"|"blend"|"conilon"|"descaf"|null,"notes":[até 4 notas em português],"weight_g":número|null,"roast_date":"AAAA-MM-DD"|null,"box":[x,y,largura,altura em % da imagem, de 0 a 100]}]}
 Regras: um item por pacote, sem repetir; use null no que não estiver legível e não invente marca, peso ou data; "box" é o retângulo aproximado do pacote na foto. Torra média-clara conta como "clara"; média-escura como "escura".`;
-  try{const r=await callIA('shelf',SH.photo);const pk=(r&&r.packages)||[];
+  try{const r=await callIA('shelf',SH.big||SH.photo);const pk=(r&&r.packages)||[];
     SH.items=await Promise.all(pk.map(async q=>Object.assign({},q,{on:true,weight:Math.round(q.weight_g)||250,crop:await cropBox(SH.photo,q.box)})));renderShelf();
   }catch(e){box.innerHTML=`<div class="ai-box"><p class="label">Não consegui ler a foto</p><p class="notes" style="margin-top:4px">${e&&e.code==='rate_limited'?'Muitas leituras seguidas. Tente de novo em instantes.':'Tente com mais luz e os rótulos de frente.'}</p>${e&&(e.code||e.message)?`<p class="disclaim">Detalhe: ${String(e.code||'')} ${String(e.message||'').slice(0,120)}</p>`:''}</div>`}
 }
@@ -1351,13 +1506,13 @@ function renderShelf(){
     ${q.crop?`<img src="${q.crop}" alt="">`:`<span class="shelf-noimg">${(q.brand||'?').slice(0,2).toUpperCase()}</span>`}
     <div style="flex:1;min-width:0"><p class="label">${q.brand||'Marca não legível'}</p><p class="cname" style="font-size:16px">${q.name||'Café sem nome legível'}</p><p class="notes">${[q.country,q.roast?('torra '+ROAST[q.roast].toLowerCase()):null].filter(Boolean).join(' · ')||'Origem não lida'}</p><span class="tag ${b[1]}" style="margin-top:4px;display:inline-block">${b[0]}</span></div>
     <div class="field shelf-w"><label for="shw${i}">Gramas</label><input id="shw${i}" type="number" inputmode="numeric" value="${q.weight}" data-sh="${i}"></div></div>`}).join('')}</div>
-  <button class="cta dark" style="margin-top:16px" data-act="shSave" ${n?'':'disabled'}>Adicionar ${n} café${n===1?'':'s'} ao estoque</button>
+  ${locPicker()}<button class="cta dark" style="margin-top:16px" data-act="shSave" ${n?'':'disabled'}>Adicionar ${n} café${n===1?'':'s'} ao estoque</button>
   <p class="disclaim">Cada pacote entra cheio, com o peso acima. Depois, toque nele no estoque para corrigir qualquer dado.</p>`}
 function saveShelf(){
   let k=0;SH.items.forEach((q,i)=>{if(!q.on)return;const w=Math.max(1,Math.round(+(($('#shw'+i)||{}).value)||q.weight));
     const notes=(q.notes||[]).filter(Boolean),nj=notes.join(' ');const prof=/fruta|citr|berry|laranja|manga|cereja/i.test(nj)?'frutado':/flor|jasmim|floral/i.test(nj)?'floral':/chocolate|cacau|noz|castanha/i.test(nj)?'chocolate':'caramelo';
-    const c={id:'meu-'+Date.now()+'-'+i,brand:q.brand||'Marca não identificada',name:q.name||'Café '+(i+1),roast:['clara','media','escura'].includes(q.roast)?q.roast:'media',species:SPECIES[q.species]?q.species:'arabica',profile:prof,notes:notes.length?notes:['notas a descobrir'],country:q.country||null,region:q.region||null,variety:q.variety||null,process:q.process||null,origin:[q.region,q.country].filter(Boolean).join(' · ')||'Origem não lida',mine:true};
-    S.myCoffees.unshift(c);S.stock[c.id]={total:w,left:w,at:Date.now(),roastDate:q.roast_date||null,frozen:false,photo:q.crop||null};radarPush(c);if(q.crop)uploadPhoto(c.id,q.crop);k++});
+    const c={id:'meu-'+Date.now()+'-'+i,brand:q.brand||'Marca não identificada',name:q.name||'Café '+(i+1),roast:['clara','media','escura'].includes(q.roast)?q.roast:'media',species:SPECIES[q.species]?q.species:'arabica',profile:prof,notes:notes.length?notes:['notas a descobrir'],country:q.country||null,region:q.region||null,variety:q.variety||null,process:q.process||null,farm:[q.farm,q.producer].filter(Boolean).join(' · ')||null,altitude:q.altitude_m||null,score:q.score||null,origin:[q.region,q.country].filter(Boolean).join(' · ')||'Origem não lida',mine:true};c.tech=[['Origem',c.country],['Região',c.region],['Fazenda',c.farm],['Altitude',c.altitude?c.altitude+' m':null],['Variedade',c.variety],['Processo',c.process],['Pontuação',c.score?c.score+' SCA':null]].filter(t=>t[1]);if(!c.tech.length)delete c.tech;
+    S.myCoffees.unshift(c);{const lp=LOCPICK||S.locAtivo;S.stock[c.id]={total:w,left:w,at:Date.now(),roastDate:q.roast_date||null,frozen:false,photo:q.crop||null,loc:lp,locNome:locNome(lp)}}radarPush(c);if(q.crop)uploadPhoto(c.id,q.crop);k++});
   save();closeSheet();estSeg='meu';estFilter='todos';go('cafes');toast(k+' café'+(k===1?'':'s')+' adicionado'+(k===1?'':'s')+' ao estoque')}
 function radarPush(c){
   const row={brand:c.brand,name:c.name,country:c.country||null,region:c.region||null,variety:c.variety||null,process:c.process||null,seller:c.seller||null,status:brandStatus(c.brand),at:Date.now()};
@@ -1399,6 +1554,8 @@ function stockDetail(id){
   const c=coffeeById(id),st=S.stock[id],si=stockInfo(id),ex=S.diary.map((x,i)=>[x,i]).filter(([x])=>x.c===id).reverse();
   const n=ex.length,av=k=>n?ex.reduce((a,[x])=>a+(+x[k]||0),0)/n:0;
   sheet(`<div class="sd-head"><label class="sd-photo" for="photoEdit">${st.photo?`<img src="${st.photo}" alt="">`:bagFor(c)}<span>${st.photo?'Alterar foto':'Adicionar foto'}</span></label><div><p class="label">${c.brand}</p><h3 style="margin:2px 0">${c.name}</h3><p class="notes">${si.left>0?si.left+' de '+si.total+' g':'Pacote finalizado'} · ${st.frozen?'Congelado':torradoHa(st.roastDate)}</p></div></div>
+  <div class="block"><p class="label" style="color:var(--ink)">Sua nota para este café</p>${notaPick(id)}</div>
+  <div class="block"><p class="label" style="color:var(--ink)">Onde está</p><div class="gchips" style="margin-top:8px">${locs().map(l=>`<button class="${stLoc(st)===l.id?'on':''}" data-act="moveLoc" data-id="${id}" data-loc="${l.id}">${l.nome}</button>`).join('')}<button data-act="locSheet">+ Novo local</button></div></div>
   <div class="block"><div class="sec-h" style="margin:0"><p class="label" style="color:var(--ink)">Extrações com este café</p><span>${n?stars(av('rate'))+' <b class="num">'+av('rate').toFixed(1).replace('.',',')+'</b>':''}</span></div>
     <div class="pgrid"><div><p class="label">Extrações</p><b>${n}</b></div><div><p class="label">Dose média</p><b>${n?Math.round(av('dose'))+' g':'—'}</b></div><div><p class="label">Sabor médio</p><b style="font-size:17px">${n?SWEET[Math.round(av('sweet'))+2]:'—'}</b></div><div><p class="label">Corpo médio</p><b style="font-size:17px">${n?BODY[Math.round(av('body'))+2]:'—'}</b></div></div>
     <div style="margin-top:8px">${n?ex.slice(0,6).map(([x,i])=>{const r=recipeById(x.r);return r?`<div class="take"><span class="mi" style="width:40px;height:40px;border-radius:10px;background:var(--bone);display:flex;align-items:center;justify-content:center">${icon(r.m).replace('class="ico"','class="ico" width="22" height="22"')}</span><div><h4>${r.name}</h4><p class="num">${x.dose} g · 1:${fmtRatio(x.ratio||x.water/x.dose)}${x.grindUsed!=null?' · Moagem '+fmtG(x.grindUsed):''} · ${new Date(x.at).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'})}</p></div><div style="text-align:right">${stars(x.rate)}<button class="link" style="display:block;margin:6px 0 0 auto" data-act="repeatTake" data-id="${i}">↻ Repetir</button></div></div>`:''}).join(''):'<p class="notes" style="padding:10px 0">Nenhuma extração ainda. Use este café no moedor e prepare.</p>'}</div></div>
@@ -1410,11 +1567,12 @@ function askDelete(id){const c=coffeeById(id);sheet(`<p class="label" style="col
 
 /* ---------- estoque e renovação ---------- */
 let SP=250;
-function stockSheet(id){const c=coffeeById(id);SP=250;PH=null;
+function stockSheet(id){const c=coffeeById(id);SP=250;PH=null;LOCPICK=S.locAtivo;
   sheet(`<p class="label">Estoque</p><h3>Quanto ${c.name} você tem?</h3><p class="notes">Cada preparo salvo desconta a dose do pacote. Avisamos antes de acabar.</p>
   <div class="seg" id="stP" style="margin-top:16px">${[250,500,1000].map(x=>`<button class="${SP===x?'on':''}" data-act="stPack" data-id="${x}">${x<1000?x+' g':'1 kg'}</button>`).join('')}</div>
   <div class="field" style="margin-top:16px"><label for="stDate">Data de torra</label><input class="txt" id="stDate" type="date"></div>
   <label class="chk"><input type="checkbox" id="stFrz"> Pacote congelado</label>
+  ${locPicker()}
   ${photoField()}
   <button class="cta dark" style="margin-top:18px" data-act="saveStock" data-id="${id}">Registrar pacote</button>`)}
 function renewSheet(id){
@@ -1521,7 +1679,7 @@ function initCloud(){
   const cfg=window.AGNUS_CONFIG||{};
   if(!window.supabase||!cfg.SUPABASE_URL||/SEU-PROJETO/.test(cfg.SUPABASE_URL)){console.info('Agnus Coffee: modo local (sem Supabase configurado)');return}
   SB=window.supabase.createClient(cfg.SUPABASE_URL,cfg.SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,flowType:'pkce'}});
-  loadPartners();
+  loadPartners();loadPublic();
   SB.auth.onAuthStateChange((ev,session)=>{const u=session?session.user:null;if(u&&(!USER||USER.id!==u.id)){USER=u;onLogin()}else if(!u&&USER){USER=null;onLogout()}});
 }
 async function onLogin(){
@@ -1532,7 +1690,7 @@ async function onLogin(){
       Object.entries(local.stock||{}).forEach(([k,v])=>{if(!S.stock[k])S.stock[k]=v});}
     if(!S.name){const nm=USER.user_metadata&&(USER.user_metadata.full_name||USER.user_metadata.name);if(nm)S.name=nm}
     S._uid=USER.id;S._rev=Math.max(S._rev||0,(data&&data.state&&data.state._rev)||0);cloudReady=true;try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}await pushCloud();
-    const {data:adm}=await SB.from('admins').select('user_id').eq('user_id',USER.id).maybeSingle();isTeam=!!adm;if(isTeam)loadRadar();registrarAcesso();if(S.casaId)loadCasa();
+    const {data:adm}=await SB.from('admins').select('user_id').eq('user_id',USER.id).maybeSingle();isTeam=!!adm;if(isTeam)loadRadar();registrarAcesso();if(S.casaId)loadCasa();loadComunidade(true);
   }catch(e){cloudReady=true;toast('Sem conexão com a nuvem. Seus dados seguem salvos neste aparelho.')}
   closeSheet();render();toast('Conectado'+(firstName()?', '+firstName():''));
 }
@@ -1574,7 +1732,7 @@ function enter(){
   setTimeout(()=>{l.classList.add('hidden');$('#app').classList.remove('entering');if(!S.onboarded)openOnboard()},1150);
 }
 function showLanding(){const l=$('#landing');l.classList.remove('hidden');l.getBoundingClientRect();l.classList.remove('gone');entered=false;
-  l.querySelectorAll('.l-word img,.l-sub,.l-line,.l-tag,.l-meta,.l-cue').forEach(el=>{el.style.animation='none';el.getBoundingClientRect();el.style.animation=''})}
+  l.querySelectorAll('.l-logo .lamb,.l-word img,.l-sub,.l-line,.l-tag,.l-ital,.l-meta,.l-micro,.l-cue,.l-glow').forEach(el=>{el.style.animation='none';el.getBoundingClientRect();el.style.animation=''})}
 function initLanding(){
   const l=$('#landing');let y0=null;
   l.addEventListener('wheel',e=>{if(e.deltaY>8)enter()},{passive:true});
@@ -1596,6 +1754,27 @@ document.addEventListener('click',e=>{
     case'gocol':recSeg='colecao';recFilter='todos';go('receitas');break;
     case'eseg':estSeg=id;render();break;
     case'efilter':estFilter=id;render();break;
+    case'eloc':estLoc=id;render();break;
+    case'addFriendSheet':addFriendSheet();break;
+    case'friend':friendSheet(id);break;
+    case'friendTake':{const f=FRIENDS.find(x=>x.user_id===id);const t=f&&((f.dados||{}).takes||[])[+el.dataset.i];if(t)takeSheet(Object.assign({who:f.nome},t));break}
+    case'comTake':{const t=COMFEED[+id];if(t)takeSheet(t);break}
+    case'useTake':{const t=TAKE;if(!t)break;let rid=t.rid;if(!recipeById(rid)&&t.rec){const nr=Object.assign({},t.rec,{id:'amigo-'+Date.now(),author:(t.who||'Comunidade'),mine:true});S.myRecipes.unshift(nr);rid=nr.id;save()}closeSheet();openBrew(rid,{dose:t.dose,sweet:t.sweet||0,body:t.body||0});track('receita_comunidade',{receita:t.rid,de:t.uid||null});break}
+    case'shareCode':{const txt=`Vem tomar café comigo no Agnus Coffee. Me adiciona com o código ${myCode()}: https://agnusfilmsco.github.io/agnus-coffee/`;if(navigator.share){navigator.share({text:txt}).catch(()=>{})}else{try{navigator.clipboard.writeText(txt).then(()=>toast('Convite copiado'),()=>toast('Código: '+myCode()))}catch(e){toast('Código: '+myCode())}}break}
+    case'addFriend':{const cod=(($('#friendCode')||{}).value||'').trim().toUpperCase();if(cod.length<6){toast('O código tem 6 letras e números');break}SB.rpc('adicionar_amigo',{p_codigo:cod}).then(({data,error})=>{if(error){toast(/não encontrado/.test(error.message)?'Código não encontrado':/seu código/.test(error.message)?'Esse é o seu código':'Não consegui adicionar agora');return}track('amigo_adicionado',{});closeSheet();toast((data||'Amigo')+' agora é seu amigo');loadComunidade(true)});break}
+    case'rmFriend':SB.rpc('remover_amigo',{p_amigo:id}).then(()=>{FRIENDS=FRIENDS.filter(f=>f.user_id!==id);closeSheet();render();toast('Amizade desfeita')});break;
+    case'preClube':if(S.preClube){toast('Você já está no pré-cadastro. Avisaremos primeiro.');break}preClubeSheet();break;
+    case'pcInt':{const i=PRE.int.indexOf(id);i>=0?PRE.int.splice(i,1):PRE.int.push(id);el.classList.toggle('on');break}
+    case'savePre':{const row={user_id:USER.id,nome:(($('#pcNome')||{}).value||'').trim()||null,email:USER.email||null,cidade:(($('#pcCidade')||{}).value||'').trim()||null,interesses:PRE.int};SB.from('pre_cadastro_clube').upsert(row).then(({error})=>{if(error){toast('Não consegui salvar agora');return}S.preClube=true;S.waitlist=true;CLUBE_COUNT++;save();track('pre_cadastro_clube',{interesses:PRE.int,cidade:row.cidade});closeSheet();render();toast('Pré-cadastro feito. Você será avisado primeiro.')});break}
+    case'recGo':{const r=(RECS||[]).find(x=>String(x.id)===id);track('clique_recomendacao',{titulo:r?r.titulo:id});if(r&&r.url){try{const u=new URL(r.url);u.searchParams.set('utm_source','agnuscoffee');u.searchParams.set('utm_medium','app');u.searchParams.set('utm_campaign','recomendacao');window.open(u.toString(),'_blank','noopener')}catch(e){window.open(r.url,'_blank','noopener')}}else toast('Em breve com link de compra no app');break}
+    case'pickLoc':LOCPICK=id;segOn('#locPick',id);break;
+    case'setLoc':setLoc(id);break;
+    case'locSheet':locSheet();break;
+    case'addLoc':{const n=(($('#newLoc')||{}).value||'').trim();if(!n){toast('Digite o nome do local');break}const lid='l-'+Date.now().toString(36);S.locais=[...locs(),{id:lid,nome:n.slice(0,30)}];LOCPICK=lid;save();locSheet();render();toast(n+' adicionado');break}
+    case'delLoc':{if(locs().length<2){toast('Você precisa de pelo menos um local');break}const dest=locs().find(l=>l.id!==id);Object.values(S.stock||{}).forEach(x=>{if(stLoc(x)===id){x.loc=dest.id;x.locNome=dest.nome}});S.locais=locs().filter(l=>l.id!==id);if(S.locAtivo===id)S.locAtivo=dest.id;if(estLoc===id)estLoc='todos';save();locSheet();render();toast('Local removido. Os pacotes foram para '+dest.nome);break}
+    case'moveLoc':{const st=S.stock[id];st.loc=el.dataset.loc;st.locNome=locNome(st.loc);save();stockDetail(id);render();toast('Pacote em '+st.locNome);break}
+    case'cafeNota':{S.cafeNotas=S.cafeNotas||{};const n=+el.dataset.n;S.cafeNotas[id]=S.cafeNotas[id]===n?0:n;if(!S.cafeNotas[id])delete S.cafeNotas[id];save();const box=el.closest('.nota-pick');if(box)box.outerHTML=notaPick(id);render();track('nota_cafe',{cafe:id,nota:S.cafeNotas[id]||0});break}
+    case'rpct':R.pct=+id;segOn('#pctPick',id);break;
     case'dmode':diaMode=id;render();break;
     case'dday':diaDay=Math.min(0,diaDay+Number(id));render();break;
     case'newRecipe':newRecipeSheet();break;
@@ -1657,9 +1836,9 @@ document.addEventListener('click',e=>{
     case'rate':R.rate=Number(id);segOn('#cups',id);break;
     case'rtag':{const i=R.tags.indexOf(id);i>=0?R.tags.splice(i,1):R.tags.push(id);el.classList.toggle('on');
       $('#advice').innerHTML=`<p class="label">Para o próximo take</p>${R.tags.length?R.tags.map(t=>`<p style="margin-top:6px">${adviceFor(t)}</p>`).join(''):'<p style="margin-top:6px">Marque o que sentiu e o app sugere o ajuste.</p>'}`;break}
-    case'saveTake':{const p=T.p;S.diary.push({n:S.diary.length+1,r:T.r.id,c:S.coffeeId,dose:p.dose,water:p.water,temp:p.temp,ratio:p.ratio,rate:R.rate,tags:R.tags,at:Date.now(),roast:B.roast,sweet:B.sweet,body:B.body,grinder:curGrinder()?curGrinder().name:null,grindUsed:curGrinder()&&B.grindUsed!=null?+B.grindUsed:null});track('preparo',{receita:T.r.id,metodo:T.r.m,cafe:S.coffeeId,dose:p.dose,nota:R.rate,moedor:curGrinder()?curGrinder().name:null,moagem:B.grindUsed});
+    case'saveTake':{const p=T.p,obs=(($('#takeObs')||{}).value||'').trim()||null;S.diary.push({n:S.diary.length+1,r:T.r.id,c:S.coffeeId,dose:p.dose,water:p.water,temp:p.temp,ratio:p.ratio,rate:R.rate,tags:R.tags,pct:R.pct||100,obs,loc:S.locAtivo,at:Date.now(),roast:B.roast,sweet:B.sweet,body:B.body,grinder:curGrinder()?curGrinder().name:null,grindUsed:curGrinder()&&B.grindUsed!=null?+B.grindUsed:null});track('preparo',{receita:T.r.id,metodo:T.r.m,cafe:S.coffeeId,dose:p.dose,nota:R.rate,moedor:curGrinder()?curGrinder().name:null,moagem:B.grindUsed});
       const st=(S.stock||{})[S.coffeeId];if(st&&T.r.engine!=='cold'){st.left=Math.max(0,st.left-p.dose);if(CASA){lastCasaSnap=casaSnap();const c1=coffeeById(S.coffeeId);SB.rpc('casa_descontar',{p_casa:CASA.id,p_cafe:S.coffeeId,p_gramas:p.dose,p_texto:`usou ${p.dose} g de ${c1?c1.name:'café'} · ${METHODS[T.r.m]}`,p_meu_nome:firstName()||'Alguém'}).then(()=>{},()=>{})}}
-      S.caffeine.push({t:Date.now(),mg:cafFor(T.r,p.dose,coffeeById(S.coffeeId)),label:METHODS[T.r.m]+' · '+T.r.name});save();
+      S.caffeine.push({t:Date.now(),mg:Math.round(cafFor(T.r,p.dose,coffeeById(S.coffeeId))*(R.pct||100)/100),label:METHODS[T.r.m]+' · '+T.r.name+((R.pct||100)<100?' · '+R.pct+'%':'')});save();
       const n=S.diary.length,T0=T.r;closeSheet();cancelAnimationFrame(raf);T=null;$('#timer').classList.remove('open');$('#brew').classList.remove('open');go('inicio');{const c0=coffeeById(S.coffeeId),s0=(S.stock||{})[S.coffeeId];toast(s0&&T0.engine!=='cold'?`−${p.dose} g de ${c0.name} · restam ${Math.round(s0.left)} g`:`Take ${String(n).padStart(2,'0')} salvo`)}{const si=stockInfo(S.coffeeId);if(si&&si.low)setTimeout(()=>renewSheet(S.coffeeId),900)}break}
     case'closeSheet':closeSheet();break;
     case'addcaf':{const mg=cafFor(recipeById('espresso-12'),18,coffeeById(S.coffeeId));S.caffeine.push({t:Date.now(),mg,label:'Espresso'});save();if($('#caf').classList.contains('open'))renderCaf();render();toast('+'+mg+' mg de cafeína');break}
@@ -1673,16 +1852,17 @@ document.addEventListener('click',e=>{
     case'saveCoffee':{const brand=$('#acBrand').value.trim(),name=$('#acName').value.trim();if(!brand||!name){toast('Preencha marca e nome do café');break}
       const v=k=>($('#'+k).value||'').trim()||null;const notes=$('#acNotes').value.split(',').map(x=>x.trim()).filter(Boolean);
       const prof=/fruta|citr|berry|laranja|manga|cereja/i.test(notes.join(' '))?'frutado':/flor|jasmim|floral/i.test(notes.join(' '))?'floral':/chocolate|cacau|noz|castanha/i.test(notes.join(' '))?'chocolate':'caramelo';
-      const c={id:'meu-'+Date.now(),brand,name,roast:AC.roast,species:AC.species,profile:prof,notes:notes.length?notes:['notas a descobrir'],country:v('acCountry'),region:v('acRegion'),variety:v('acVariety'),process:v('acProcess'),seller:v('acSeller'),origin:[v('acRegion'),v('acCountry')].filter(Boolean).join(' · ')||SPECIES[AC.species][0],mine:true};
+      const c={id:'meu-'+Date.now(),brand,name,roast:AC.roast,species:AC.species,profile:prof,notes:notes.length?notes:['notas a descobrir'],country:v('acCountry'),region:v('acRegion'),variety:v('acVariety'),process:v('acProcess'),seller:v('acSeller'),farm:v('acFarm'),altitude:v('acAlt'),score:(AI&&AI.score)||null,harvest:(AI&&AI.harvest)||null,roastLabel:(AI&&AI.roast_label)||undefined,origin:[v('acRegion'),v('acCountry')].filter(Boolean).join(' · ')||SPECIES[AC.species][0],mine:true};
+      c.tech=[['Origem',c.country],['Região',c.region],['Fazenda',c.farm],['Altitude',c.altitude?c.altitude+' m':null],['Variedade',c.variety],['Processo',c.process],['Safra',c.harvest],['Pontuação',c.score?c.score+' SCA':null]].filter(t=>t[1]);if(!c.tech.length)delete c.tech;
       const left=AC.pack;
-      S.myCoffees.unshift(c);S.coffeeId=c.id;S.stock[c.id]={total:AC.pack,left,at:Date.now(),roastDate:v('acDate'),frozen:$('#acFrz').checked,photo:PH};radarPush(c);if(PH)uploadPhoto(c.id,PH);save();closeSheet();if(B&&$('#brew').classList.contains('open')){B.roast=c.roast;renderBrew()}render();
+      S.myCoffees.unshift(c);S.coffeeId=c.id;{const lp=LOCPICK||S.locAtivo;S.stock[c.id]={total:AC.pack,left,at:Date.now(),roastDate:v('acDate'),frozen:$('#acFrz').checked,photo:PH,loc:lp,locNome:locNome(lp)}}AI=null;PHAI=null;radarPush(c);if(PH)uploadPhoto(c.id,PH);save();closeSheet();if(B&&$('#brew').classList.contains('open')){B.roast=c.roast;renderBrew()}render();
       {const st=brandStatus(brand);toast(st==='parceira'?'Café salvo · marca parceira Agnus':st==='nova'?'Café salvo · marca nova no radar':'Café salvo no estoque')}break}
     case'enter':enter();break;
     case'acPack':AC.pack=+id;segOn('#acP',id);break;
     case'repeat':case'repeatAdjust':{const h=habit();if(!h)break;if(h.c&&coffeeById(h.c))S.coffeeId=h.c;openBrew(h.r.id,{dose:h.dose,roast:h.roast,sweet:h.sweet,body:h.body});if(a==='repeat')setTimeout(openTimer,450);break}
     case'stockSheet':stockSheet(id);break;
     case'stPack':SP=+id;segOn('#stP',id);break;
-    case'saveStock':S.stock[id]={total:SP,left:SP,at:Date.now(),roastDate:$('#stDate').value||null,frozen:$('#stFrz').checked,photo:PH};if(PH)uploadPhoto(id,PH);save();closeSheet();render();if($('#brew').classList.contains('open'))renderBrew();toast('Pacote de '+(SP<1000?SP+' g':'1 kg')+' no estoque');break;
+    case'saveStock':{const lp=LOCPICK||S.locAtivo,old=S.stock[id];let key=id;if(old&&old.left>0&&stLoc(old)!==lp){const c0=coffeeById(id),nid=id.split('--')[0]+'--'+lp;if(!coffeeById(nid))S.myCoffees.unshift(Object.assign({},c0,{id:nid,mine:true}));key=nid}S.stock[key]={total:SP,left:SP,at:Date.now(),roastDate:$('#stDate').value||null,frozen:$('#stFrz').checked,photo:PH,loc:lp,locNome:locNome(lp)};if(PH)uploadPhoto(key,PH);}save();closeSheet();render();if($('#brew').classList.contains('open'))renderBrew();toast('Pacote de '+(SP<1000?SP+' g':'1 kg')+' no estoque');break;
     case'renew':renewSheet(id);break;
     case'refill':{const st=S.stock[id];st.left=st.total;st.at=Date.now();st.roastDate=null;save();closeSheet();render();toast('Estoque renovado');break}
     case'subscribe':S.subscribed=!S.subscribed;save();track('assinatura_interesse',{ativo:S.subscribed});if(SB&&USER)SB.from('perfis').update({assinante:S.subscribed}).eq('user_id',USER.id).then(()=>{},()=>{});renewSheet(id);render();toast(S.subscribed?'Assinatura reservada. Primeiro envio em dezembro':'Assinatura cancelada');break;
@@ -1701,6 +1881,10 @@ document.addEventListener('click',e=>{
     case'obP':O.palate=Number(id);segOn('#obP',id);break;
     case'obDone':if($('#obName'))S.name=$('#obName').value.trim();if($('#obW'))S.profile={weight:$('#obW').value,height:$('#obH').value,preg:$('#obPreg').checked};S.methods=O.methods.length?O.methods:['v60'];S.scale=O.scale;S.palate=O.palate;S.onboarded=true;save();$('#onboard').classList.remove('open');render();break;
   }
+});
+document.addEventListener('change',e=>{
+  if(e.target.id==='shareAll'){S.compartilhar=e.target.checked;save();pushVitrine();toast(S.compartilhar?'Suas receitas aparecem para a comunidade':'Só seus amigos veem suas receitas')}
+  if(e.target.classList&&e.target.classList.contains('locName')){const l=locs().find(x=>x.id===e.target.dataset.loc),n=e.target.value.trim().slice(0,30);if(l&&n){l.nome=n;Object.values(S.stock||{}).forEach(x=>{if(stLoc(x)===l.id)x.locNome=n});save();render()}}
 });
 document.addEventListener('input',e=>{
   if(e.target.id==='grindUsed'){B.grindUsed=+e.target.value;B.grindTouched=true}
